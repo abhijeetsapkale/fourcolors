@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url('../public/fonts/Gilroy-Bold.eot');
+  src: url('../public/fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../public/fonts/Gilroy-Bold.woff2') format('woff2'),
+       url('../public/fonts/Gilroy-Bold.woff') format('woff'),
+       url('../public/fonts/Gilroy-Bold.ttf')  format('truetype'),
+       url('../public/fonts/Gilroy-Bold.svg#Gilroy-Bold') format('svg');
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #4E5461;
+  letter-spacing: 0.01em;
+}
+
+a {
+  color: #587DDB;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+.mt-20{
+  margin-top: 20px;
+}
+.mb-20{
+  margin-bottom: 20px !important;
+}
+.mb-0{
+  margin-bottom: 0 !important;
+}
+.pb-10{
+  padding-bottom: 10px;
+}
+
+.relative{
+  position: relative
+}
+.text-center{
+  text-align: center;
+}
+.text-dark{
+  color: #4E5461 !important;
+}
+
+.auth-logo{
+  position: absolute;
+  top: 15px;
+  left: 24px;
+}
+.auth-header{
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -0.01em;
+  color: #2B313F;
+  margin-bottom: 25px;
+}
+.auth-wrap{
+  width: calc(100% - 130px);
+  max-width: 400px;
+  margin: auto;
+}
+.auth-wrap label{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #4E5461;
+}
+.auth-wrap .ant-input, .auth-wrap .ant-input-affix-wrapper{
+  border: 1px solid #D0D3D9;
+  border-radius: 6px;
+}
+.ant-input-lg, .auth-wrap .ant-input-affix-wrapper-lg{
+  padding: 7px 11px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.ant-btn{
+  padding: 0px 14px;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 5px;
+  height: 35px;
+}
+.ant-btn.ant-btn-primary{
+  background: #22B27E;
+  color: #fff;
+  border: 1px solid #22B27E;
+  font-weight: 500;
+  font-size: 14px;
+}
+.ant-btn.ant-btn-primary:hover{
+  background: #186551;
+}
+.ant-btn.ant-btn-default{
+  background: #fff;
+  color: #212827;
+  border: 1px solid #AABEB9;
+  font-weight: 500;
+  font-size: 14px;
+}
+.ant-btn.ant-btn-default:hover{
+  background: #E4F2EF;
+  border: 1px solid #AABEB9;
+}
+.fw-600{
+  font-weight: 600;
+}
+.fw-500{
+  font-weight: 500;
+}
+.auth-banner-text{
+  font-family: 'Gilroy-Bold';
+  font-size: 40px;
+  position: absolute;
+  top: 26%;
+  left: 32%;
+  z-index: 2;
+  color: #fff;
+  line-height: 47px;
+}
+.font-12{
+  font-size: 12px;
+}
+.login-bg{
+  background: url('../public/images/authbg.png');
+  background-size: cover;
+  height: 100vh;
+  margin-top: -32px;
+}
+.signupbg{
+  background: url('../public/images/signupbg.png');
+  background-size: cover;
+  height: 100vh;
+  margin-top: -32px;
+}
+.otp-box{
+  width: 56px !important;
+  height: 76px !important;
+  margin-right: 12px !important;
+  font-weight: 500;
+  font-size: 32px;
+  color: #4E5461;
+}
+
+.custom-ck .ant-checkbox{
+  display: none;
+}
+.custom-ck .ant-checkbox-wrapper{
+  margin-bottom: 10px;
+}
+.custom-ck .ant-checkbox-wrapper span{
+  padding:8px 12px;
+  border: 1px solid #D0D3D9;
+  border-radius: 6px;
+  font-weight: 500;
+}
+.custom-ck .ant-checkbox-wrapper.ant-checkbox-wrapper-checked span{
+  background: #EEF2FB;
+  border: 1px solid #587DDB;
+  color: #587DDB;
+}
+.custom-tab{
+  margin: 0 0 25px 0;
+  padding: 0;
+}
+.custom-tab li{
+  display: inline-block;
+  color: #777C8C;
+  margin-right: 36px;
+}
+.custom-tab li:last-child{
+  margin-right: 0;
+}
+.custom-tab li a{
+  color: #777C8C;
+  font-weight: 500;
+  position: relative;
+}
+.custom-tab li a span{
+  width: 24px;
+  height: 24px;
+  background: #EEEEF0;
+  border-radius: 100px;
+  display: inline-block;
+  text-align: center;
+  line-height: 24px;
+  font-weight: 500;
+  margin-right: 5px;
+}
+.custom-tab li a.active{
+  color: #587DDB;
+  font-weight: 600;
+}
+.custom-tab li a.active span{
+  background: #587DDB;
+  color: #fff;
+  font-weight: 500;
+}
+
+.custom-tab li a:before{
+  content: url('../public/images/Arrow/right-grey.svg');
+  position: absolute;
+  left:-20px;
+  top:0px
+}
+.custom-tab li a.active:before{
+  content: url('../public/images/Arrow/right-blue.svg');
+  position: absolute;
+  left:-20px;
+  top:0px
+}
+.custom-tab li:first-child a:before{
+  content: none;
+}
+.auth-tab.ant-tabs-top > .ant-tabs-nav::before{
+  border: none;
+}
+.auth-tab .ant-tabs-ink-bar{
+  display: none;
+}
+.auth-tab .ant-tabs-nav-list{
+  background: #EEEEF0;
+  padding: 5px;
+  border-radius: 50px;
+}
+.auth-tab .ant-tabs-tab{
+  padding: 8px 16px;
+  border-radius: 50px;
+}
+.auth-tab .ant-tabs-tab.ant-tabs-tab-active{
+  background-color: #fff;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.auth-tab .ant-tabs-tab-btn .ant-image-img{
+  position: relative;
+  top:-1px
+}
+.auth-tab .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+  color: #4E5461;
+}
+.auth-tab .ant-tabs-tab + .ant-tabs-tab {
+  margin: 0;
+}
+.forgot-center{
+  margin-top: 33vh;
+}
+.pe{
+  cursor: pointer;
+}
+
+
+.title-1{
+  font-weight: 600;
+  font-size: 18px;
+  color: #4E5461;
+}
+.title-2{
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: #777C8C;
+}
+.title-3{
+  font-weight: 600;
+  font-size: 12px;
+  color: #4E5461;
+}
+.title-4{
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 20px;
+  color: #777C8C;
+}
+.d-flex{
+  display: flex;
+}
+.align-items-center{
+  align-items: center;
+}
