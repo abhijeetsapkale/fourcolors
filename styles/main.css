@@ -66,9 +66,12 @@
 .main-pad{
   padding: 15px;
   background: #F4F4F4;
-  min-height: calc(100vh - 154px);
+  min-height: calc(100vh - 120px);
 }
-
+.img-export{
+  position: relative;
+  top: -1px;
+}
 .btn-icon-round{
   cursor: pointer;
 }
@@ -79,14 +82,14 @@
 
 /* table1 css */
 .table-1 thead tr th{
-  font-weight: 600;
-  font-size: 10px;
+  font-weight: 500;
+  font-size: 11px;
   line-height: 12px;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: #A2A7B3;
-  background: none;
-  padding: 8px 15px;
+  color: #101828;
+  padding: 10px 15px;
+  background: #DCDFE9;
 }
 
 .ant-table-thead > tr > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before{
@@ -98,13 +101,13 @@
 .table-1 tbody tr td, .table-1 tbody tr td p, .table-1 tbody tr td span{
   font-size: 12px;
   letter-spacing: 0.01em;
-  color: #777C8C;
+  color: #101828;
   margin-bottom: 0;
 }
 .table-1 tbody tr td .ant-btn span{
   font-weight: 600;
   font-size: 12px;
-  color: #777C8C;
+  color: #101828;
   letter-spacing: 0.01em;
 }
 .table-1 tbody tr td .ant-btn{
@@ -119,60 +122,68 @@
 }
 .table-1 tbody tr td h3{
   font-weight: 600;
-  font-size: 14px;
-  letter-spacing: -0.005em;
-  color: #4E5461;
+  font-size: 13px;
+  color: #101828;
   margin-bottom: 2px;
 }
-.table-1 .btn-icon-round{
-  margin-left: 15px;
-  position: relative;
-  top:-2px
+.table-1 .ant-btn.btn-icon-round{
+  width: 27px;
+  height: 27px;
+  border: none;
+  padding: 0;
+  min-width:27px;
+  box-shadow: none;
+  background: #F0F2F4;
+  border-radius: 5px;
 }
-
-.status{
-  font-weight: 500;
-  letter-spacing: 0.01em;
-}
-.status .dot{
-  width: 4px;
-  height: 4px;
-  border-radius: 4px;
-  display:inline-block;
+.table-1 .ant-btn.btn-icon-round img{
   position: relative;
   top: -2px;
 }
-.grey .dot{
-  background: #747478;
-}
-.red .dot{
-  background: #DF180B;
-}
-.yellow .dot{
-  background: #EFB008;
-}
-.blue .dot{
-  background: #218FD3;
-}
-.green .dot{
-  background: #00A878;
-}
-.status.grey{
-  color: #747478;
-}
-.status.red{
-  color: #DF180B;
-}
-.status.yellow{
-  color: #EFB008;
-}
-.status.blue{
-  color: #218FD3;
-}
-.status.green{
-  color: #00A878;
+.status{
+  font-weight: 500;
+  font-size: 13px;
+  padding: 4px 12px;
+  border-radius: 70px;
 }
 
+
+.status.dark-purple{
+  color: #161B89;
+  background: #EDECFF;
+}
+.status.light-purple{
+  color: #5F45E2;
+  background: #F7F2FF;
+}
+.status.dark-green{
+  color: #297474;
+  background: #EAF8F8;
+}
+.status.red{
+  color: #C0566A;
+  background: #FFE1E7;
+}
+.status.blue{
+  color: #3782E3;
+  background: #E7F1FF;
+}
+.status.light-green{
+  color: #168966;
+  background: #ECFFF4;
+}
+.status.orange{
+  color: #C87B22;
+  background: #FFF9F2;
+}
+.status.cyan{
+  color: #147FBB;
+  background: #CDEAFA;
+}
+.status.yellow{
+  color: #C37B0F;
+  background: #FFE9C8;
+}
 
 .header{
   padding: 12px 16px;
@@ -370,4 +381,7 @@
 }
 .ant-tabs-left .ant-tabs-tab .ant-tabs-tab-btn svg{
   margin-right: 15px;
+}
+.ant-table-tbody > tr.ant-table-row:hover > td, .ant-table-tbody > tr > td.ant-table-cell-row-hover{
+  background: #F5FAFF;
 }

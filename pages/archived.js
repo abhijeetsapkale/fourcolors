@@ -25,10 +25,24 @@ export default function AllDocuments({  }) {
             dataIndex: 'status',
             key: 'status',
             render: status => {
-                if(status == "Unshared"){
-                    return <span className='status orange'>{' '}{status}</span>
+                if(status == "Ready for Download"){
+                    return <span className='status light-green'>{' '}{status}</span>
                 }
-               
+                else if(status == "Draft"){
+                    return <span className='status light-purple'>{' '}{status}</span>
+                }
+                else if(status == "Failed"){
+                    return <span className='status red'>{' '}{status}</span>
+                }
+                else if(status == "Cancelled"){
+                    return <span className='status red'>{' '}{status}</span>
+                }
+                else if(status == "In Approval"){
+                    return <span className='status yellow'>{' '}{status}</span>
+                }
+                else if(status == "Received"){
+                    return <span className='status light-green'>{' '}{status}</span>
+                }
             }, 
             width: '25%',
             align:'center'
@@ -75,13 +89,13 @@ export default function AllDocuments({  }) {
         {
             key: '1',
             jobdetail: {
-                jobId: '-',
+                jobId: 'Job0000024',
                 mainTitle: 'TC Job Document Item',
                 date: '11 Apr, 2022; 05:57'
             },
-            status: 'Unshared',
-            receiver: "NA",
-            initiator: 'NA',
+            status: 'Ready for Download',
+            receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply'],
+            initiator: 'User DX / External Co. 1',
             action:''
         },
         {
@@ -91,9 +105,57 @@ export default function AllDocuments({  }) {
                 mainTitle: 'TC Job Document Item',
                 date: '11 Apr, 2022; 05:57'
             },
-            status: 'Unshared',
-            receiver: "NA",
+            status: 'Draft',
+            receiver: 'NA',
             initiator: 'NA',
+            action:''
+        },
+        {
+            key: '3',
+            jobdetail: {
+                jobId: 'Job0000024',
+                mainTitle: 'TC Job Document Item',
+                date: '11 Apr, 2022; 05:57'
+            },
+            status: 'Failed',
+            receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply'],
+            initiator: 'User DX / External Co. 1',
+            action:''
+        },
+        {
+            key: '4',
+            jobdetail: {
+                jobId: 'Job0000024',
+                mainTitle: 'TC Job Document Item',
+                date: '11 Apr, 2022; 05:57'
+            },
+            status: 'In Approval',
+            receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply'],
+            initiator: 'User DX / External Co. 1',
+            action:''
+        },
+        {
+            key: '5',
+            jobdetail: {
+                jobId: 'Job0000024',
+                mainTitle: 'TC Job Document Item',
+                date: '11 Apr, 2022; 05:57'
+            },
+            status: 'Ready for Download',
+            receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply'],
+            initiator: 'User DX / External Co. 1',
+            action:''
+        },
+        {
+            key: '6',
+            jobdetail: {
+                jobId: 'Job0000024',
+                mainTitle: 'TC Job Document Item',
+                date: '11 Apr, 2022; 05:57'
+            },
+            status: 'Ready for Download',
+            receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply'],
+            initiator: 'User DX / External Co. 1',
             action:''
         }
     ];
@@ -146,7 +208,7 @@ export default function AllDocuments({  }) {
     return (
         <Layout>
             <header className='header'>
-                <h1>Drafts</h1>
+                <h1>Archived</h1>
                 <Search placeholder="Search" onSearch={onSearch} allowClear />
                 <Space>
                     <Button>
@@ -155,7 +217,7 @@ export default function AllDocuments({  }) {
                             <span>Export</span>
                         </Space>
                     </Button>
-                    
+                    <Button type='primary'>New Job</Button>
                 </Space>
             </header>
             <main className='main-pad'>

@@ -1,117 +1,101 @@
 import Layout from '../components/layout';
 import Link from 'next/link';
 import { Table, Button, Dropdown, Menu, Image, Row, Col, Input, Space  } from 'antd';
+import { useRouter } from 'next/router'
 
 
 export default function AllDocuments({  }) {
 
     const columns = [
         {
-            title: 'Document',
-            dataIndex: 'document',
-            key: 'document',
-            render: document => {
+            title: 'JOB DETAILS',
+            dataIndex: 'jobdetail',
+            key: 'jobdetail',
+            render: jobdetail => {
                 return <>
-                    <h3>{document.mainTitle}</h3>
-                    <p>{document.subTitle}</p>
+                    <h3>{jobdetail.jobId}</h3>
+                    <p>{jobdetail.mainTitle}</p>
+                    <p>{jobdetail.date}</p>
                 </>
             },
-            width: '50%'
+            width: '25%'
         },
         {
             title: 'Status',
             dataIndex: 'status',
             key: 'status',
             render: status => {
-                if(status == "Draft"){
-                    return <p className='status grey'><span className='dot'></span>{' '}{status}</p>
+                if(status == "Download Complete"){
+                    return <span className='status cyan'>{' '}{status}</span>
                 }
-                else if(status == "Cancelled"){
-                    return <p className='status red'><span className='dot'></span>{' '}{status}</p>
-                }
-                else if(status == "In Progress"){
-                    return <p className='status yellow'><span className='dot'></span>{' '}{status}</p>
-                }
-                else if(status == "I need to sign"){
-                    return <p className='status blue'><span className='dot'></span>{' '}{status}</p>
-                }
-                else if(status == "Completed"){
-                    return <p className='status green'><span className='dot'></span>{' '}{status}</p>
-                }
+                
             }, 
-            width: '18%'
+            width: '25%',
+            align:'center'
         },
         {
-            title: 'Last changes',
-            dataIndex: 'changes',
-            key: 'changes',
-            render: changes => {
-                return <p className='text-dark fw-500'>{changes}</p>
+            title: 'RECEIVER / COMPANY',
+            dataIndex: 'receiver',
+            key: 'receiver',
+            render: receiver => {
+                return <p className='text-dark fw-500'>{receiver}</p>
             },
-            width: '17%'
+            width: '20%'
         },
         {
-            title: '',
-            dataIndex: 'status',
+            title: 'INITIATOR / COMPANY',
+            dataIndex: 'initiator',
+            key: 'initiator',
+            render: initiator => {
+                return <p className='text-dark fw-500'>{initiator}</p>
+            },
+            width: '20%'
+        },
+        {
+            title: 'ACTION',
+            dataIndex: 'action',
             key: 'action',
             render: status => {
-                if(status == "Draft"){
-                    return <> 
-                        <Button>Sign now</Button>
+                return <> 
+                    <Space>
                         <Dropdown overlay={menu} trigger={['click']} className="btn-icon-round" placement="bottomRight">
-                            <Image src="/images/dot.svg" alt="Logo" height={24} width={24} preview={false} />
+                            <Button className="btn-icon-round">
+                                <Image src="/images/dot.svg" alt="Logo" height={3} width={14} preview={false} />
+                            </Button>
                         </Dropdown>
-                    </>
-                }
-                else if(status == "Cancelled"){
-                    return <>
-                        <Button>Continue</Button>
-                        <Dropdown overlay={menu} trigger={['click']} className="btn-icon-round" placement="bottomRight">
-                            <Image src="/images/dot.svg" alt="Logo" height={24} width={24} preview={false} />
-                        </Dropdown>
-                    </>
-                }
-                else if(status == "In Progress"){
-                    return <>
-                        <Button>Download PDF</Button>
-                        <Dropdown overlay={menu} trigger={['click']} className="btn-icon-round" placement="bottomRight">
-                            <Image src="/images/dot.svg" alt="Logo" height={24} width={24} preview={false} />
-                        </Dropdown>
-                    </>
-                }
-                else if(status == "I need to sign"){
-                    return <>
-                        <Button>Send Reminder</Button>
-                        <Dropdown overlay={menu} trigger={['click']} className="btn-icon-round" placement="bottomRight">
-                            <Image src="/images/dot.svg" alt="Logo" height={24} width={24} preview={false} />
-                        </Dropdown>
-                    </>
-                }
-                else if(status == "Completed"){
-                    return <>
-                        <Button>Create copy</Button>
-                        <Dropdown overlay={menu} trigger={['click']} className="btn-icon-round" placement="bottomRight">
-                            <Image src="/images/dot.svg" alt="Logo" height={24} width={24} preview={false} />
-                        </Dropdown>
-                    </>
-                }
+                        <Button className="btn-icon-round"><Image src="/images/eye.svg" alt="Logo" height={8} width={11} preview={false} /></Button>
+                    </Space>
+                </>
             },
-            width: '15%'
+            width: '10%'
         },
     ];
 
     const dataSource = [
-        
         {
-            key: '5',
-            document: {
-                mainTitle: 'Octet Design NDA',
-                subTitle: 'To: ux test'
+            key: '1',
+            jobdetail: {
+                jobId: 'Job0000024',
+                mainTitle: 'TC Job Document Item',
+                date: '11 Apr, 2022; 05:57'
             },
-            status: 'Completed',
-            changes: '3 March, 2022',
+            status: 'Download Complete',
+            receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply'],
+            initiator: 'User DX / External Co. 1',
             action:''
         },
+        {
+            key: '2',
+            jobdetail: {
+                jobId: 'Job0000024',
+                mainTitle: 'TC Job Document Item',
+                date: '11 Apr, 2022; 05:57'
+            },
+            status: 'Download Complete',
+            receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply'],
+            initiator: 'User DX / External Co. 1',
+            action:''
+        }
     ];
     
     const menu = (
@@ -153,15 +137,24 @@ export default function AllDocuments({  }) {
         
     const { Search } = Input;
     const onSearch = (value) => console.log(value);
-        
+    const router = useRouter();
+
+    const navigateDocument = () =>{
+        router.push('/upload')
+    }
+
     return (
         <Layout>
             <header className='header'>
                 <h1>Completed</h1>
                 <Search placeholder="Search" onSearch={onSearch} allowClear />
                 <Space>
-                    <Button>Export</Button>
-                    <Button type='primary'>New Job</Button>
+                    <Button>
+                        <Space align="center">
+                            <Image src="/images/export.svg" alt="export" height={11} width={10} preview={false} className="img-export"/> 
+                            <span>Export</span>
+                        </Space>
+                    </Button>
                 </Space>
             </header>
             <main className='main-pad'>

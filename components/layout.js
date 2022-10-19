@@ -50,7 +50,7 @@ export default function Layout({ children }) {
                 <Image src="/images/sidebar/processing-green.svg" alt="processing"  className="img-active" preview={false}/>
                 <Image src="/images/sidebar/processing.svg" alt="processing" className="img-default" preview={false}/>
                 <span>Processing</span>
-                <Link href="/in-progress"><a></a></Link>
+                <Link href="/processing"><a></a></Link>
 
               </Menu.Item>
               <Menu.Item key="4">
@@ -58,7 +58,7 @@ export default function Layout({ children }) {
               <Image src="/images/sidebar/sent-green.svg" alt="sent"  className="img-active" preview={false}/>
                 <Image src="/images/sidebar/sent.svg" alt="sent" className="img-default" preview={false}/>
                 <span>Sent</span>
-                <Link href="/sign"><a></a></Link>
+                <Link href="/sent"><a></a></Link>
 
               </Menu.Item>
 
@@ -67,7 +67,7 @@ export default function Layout({ children }) {
               <Image src="/images/sidebar/received-green.svg" alt="received"  className="img-active" preview={false}/>
                 <Image src="/images/sidebar/received.svg" alt="received" className="img-default" preview={false}/>
                 <span>Received</span>
-                <Link href="/completed"><a></a></Link>
+                <Link href="/received"><a></a></Link>
               </Menu.Item>
               <hr />
               <Menu.Item key="6">
@@ -75,7 +75,7 @@ export default function Layout({ children }) {
               <Image src="/images/sidebar/completed-green.svg" alt="completed"  className="img-active" preview={false}/>
                 <Image src="/images/sidebar/completed.svg" alt="completed" className="img-default" preview={false}/>
                 <span>Completed</span>
-                <Link href="/cancelled"><a></a></Link>
+                <Link href="/completed"><a></a></Link>
 
 
               </Menu.Item>
@@ -84,7 +84,7 @@ export default function Layout({ children }) {
               <Image src="/images/sidebar/cancelled-green.svg" alt="cancelled"  className="img-active" preview={false}/>
                 <Image src="/images/sidebar/cancelled.svg" alt="cancelled" className="img-default" preview={false}/>
                 <span>Cancelled</span>
-                <Link href="/bin"><a></a></Link>
+                <Link href="/cancelled"><a></a></Link>
 
               </Menu.Item>
 
@@ -92,14 +92,14 @@ export default function Layout({ children }) {
               <Image src="/images/sidebar/archived-green.svg" alt="archived"  className="img-active" preview={false}/>
                 <Image src="/images/sidebar/archived.svg" alt="archived" className="img-default" preview={false}/>
                 <span>Archived</span>
-                <Link href="/cancelled"><a></a></Link>
+                <Link href="/archived"><a></a></Link>
               </Menu.Item>
               <hr />
               <Menu.Item key="9">
                 <Image src="/images/sidebar/approvals-green.svg" alt="approvals"  className="img-active" preview={false}/>
                 <Image src="/images/sidebar/approvals.svg" alt="approvals" className="img-default" preview={false}/>
                 <span>Approvals</span>
-                <Link href="/"><a></a></Link>
+                <Link href="/approvals"><a></a></Link>
               </Menu.Item>
             </Menu>
             <div className='sidebarBottom'>

@@ -25,10 +25,12 @@ export default function AllDocuments({  }) {
             dataIndex: 'status',
             key: 'status',
             render: status => {
-                if(status == "Unshared"){
-                    return <span className='status orange'>{' '}{status}</span>
+                if(status == "Ready for Download"){
+                    return <span className='status light-green'>{' '}{status}</span>
                 }
-               
+                else if(status == "Download Complete"){
+                    return <span className='status cyan'>{' '}{status}</span>
+                }
             }, 
             width: '25%',
             align:'center'
@@ -75,27 +77,28 @@ export default function AllDocuments({  }) {
         {
             key: '1',
             jobdetail: {
-                jobId: '-',
+                jobId: 'Job0000024',
                 mainTitle: 'TC Job Document Item',
                 date: '11 Apr, 2022; 05:57'
             },
-            status: 'Unshared',
-            receiver: "NA",
-            initiator: 'NA',
+            status: 'Ready for Download',
+            receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply'],
+            initiator: 'User DX / External Co. 1',
             action:''
         },
         {
             key: '2',
             jobdetail: {
-                jobId: '-',
+                jobId: 'Job0000024',
                 mainTitle: 'TC Job Document Item',
                 date: '11 Apr, 2022; 05:57'
             },
-            status: 'Unshared',
-            receiver: "NA",
-            initiator: 'NA',
+            status: 'Download Complete',
+            receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply'],
+            initiator: 'User DX / External Co. 1',
             action:''
         }
+        
     ];
     
     const menu = (
@@ -146,9 +149,10 @@ export default function AllDocuments({  }) {
     return (
         <Layout>
             <header className='header'>
-                <h1>Drafts</h1>
+                <h1>Sent</h1>
                 <Search placeholder="Search" onSearch={onSearch} allowClear />
                 <Space>
+
                     <Button>
                         <Space align="center">
                             <Image src="/images/export.svg" alt="export" height={11} width={10} preview={false} className="img-export"/> 
