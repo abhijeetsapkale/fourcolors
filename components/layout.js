@@ -31,7 +31,7 @@ export default function Layout({ children }) {
             </Row>
 
 
-            <Menu mode="vertical" className="sidebar-list">
+            <Menu mode="vertical" defaultSelectedKeys={['1']} className="sidebar-list">
 
               <Menu.Item key="1">
                 <Image src="/images/sidebar/all-jobs-green.svg" alt="All Jobs"  className="img-active" preview={false}/>
