@@ -16,7 +16,7 @@ body {
   font-size: 14px;
   color: #4E5461;
   letter-spacing: 0.01em;
-  background: #F4F4F4;
+  background: #F4F4F4 !important;
 }
 
 a {
