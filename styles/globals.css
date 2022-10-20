@@ -16,6 +16,7 @@ body {
   font-size: 14px;
   color: #4E5461;
   letter-spacing: 0.01em;
+  background: #F4F4F4;
 }
 
 a {
@@ -283,4 +284,39 @@ a {
 }
 .align-items-center{
   align-items: center;
+}
+.ant-pagination{
+  position: fixed;
+  width: calc(100% - 190px);
+  bottom: 0px;
+  background: #fff;
+  right: 0px;
+  padding: 10px 20px;
+  bottom: 0;
+  margin: 0 !important;
+}
+.ant-pagination-options{
+  position: absolute;
+  left: 20px;
+  bottom: 9px;
+  margin: 0;
+}
+.main-layout{
+  display: grid;
+  grid-template-columns: 190px 1fr;
+}
+.ant-pagination-prev .ant-pagination-item-link, 
+.ant-pagination-next .ant-pagination-item-link,
+.ant-pagination-item{
+  border: none;
+}
+.ant-pagination-item-active{
+  background: #E3E4E5;
+  border-radius: 5px;
+}
+.ant-pagination-item a{
+  color: #667085;
+}
+.ant-pagination-item-active a, .ant-pagination-item-active a:hover{
+  color: #101828;
 }

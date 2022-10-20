@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import { Col, Row, Image, Menu, Progress, Button } from 'antd';
+import { useRouter } from 'next/router';
+import React, { useState } from 'react';
 
 export default function Layout({ children }) {
   const items = [
@@ -17,12 +19,21 @@ export default function Layout({ children }) {
       key: 'in-progress',
     }
   ];
-
-
+  const router = useRouter();
+  const [current, setCurrent] = useState("1");
+  const onClick = (e) => {
+    console.log('click ', e);
+    if(window.location.pathname == '/'){
+      setCurrent(e.key);
+    }
+    else if(window.location.pathname == '/draft'){
+      setCurrent(e.key);
+    }
+  };
   return (
     <>
-      <Row>
-        <Col span={4}>
+      <div className='main-layout'>
+        
           <div className="main-sidebar">
             <Row align='middle' justify='space-between' className='sidebar-logo'>
               <Col>
@@ -31,7 +42,7 @@ export default function Layout({ children }) {
             </Row>
 
 
-            <Menu mode="vertical" defaultSelectedKeys={['1']} className="sidebar-list">
+            <Menu onClick={onClick} mode="vertical"  selectedKeys={[current]} className="sidebar-list">
 
               <Menu.Item key="1">
                 <Image src="/images/sidebar/all-jobs-green.svg" alt="All Jobs"  className="img-active" preview={false}/>
@@ -39,7 +50,7 @@ export default function Layout({ children }) {
                 <span>All Jobs</span>
                 <Link href="/"><a></a></Link>
               </Menu.Item>
-              <Menu.Item key="2">
+              <Menu.Item key="2" >
                 <Image src="/images/sidebar/draft-green.svg" alt="draft"  className="img-active" preview={false}/>
                 <Image src="/images/sidebar/draft.svg" alt="draft" className="img-default" preview={false}/>
                 <span>Draft</span>
@@ -128,11 +139,10 @@ export default function Layout({ children }) {
               </Row>
             </div>
           </div>
-        </Col>
-        <Col span={20}>
+       
           <main>{children}</main>
-        </Col>
-      </Row>
+       
+      </div>
     </>
   )
 }
