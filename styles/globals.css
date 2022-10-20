@@ -285,7 +285,7 @@ a {
 .align-items-center{
   align-items: center;
 }
-.ant-pagination{
+.ant-table-pagination.ant-pagination{
   position: fixed;
   width: calc(100% - 190px);
   bottom: 0px;
