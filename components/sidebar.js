@@ -11,16 +11,53 @@ export default function Sidebar(){
             <Image src="/images/logo.svg" alt="Logo" height={33} width={120} preview={false} />
           </Col>
         </Row>
-        <ul>
+        <ul className="sidebar-list">
           <li>
-            <Link href="/" shallow={true}><a>All jobs</a></Link>
+            <Link href="/">
+              <a>
+                <Image src="/images/sidebar/all-jobs-green.svg" alt="All Jobs"  className="img-active" preview={false}/>
+                <Image src="/images/sidebar/all-jobs.svg" alt="All Jobs" className="img-default" preview={false}/>
+                <span>All Jobs</span>
+              </a>
+            </Link>
           </li>
           <li>
-            <Link href="/draft" shallow={true}><a>Draft</a></Link>
+            <Link href="/draft">
+              <a>
+                <Image src="/images/sidebar/draft-green.svg" alt="draft"  className="img-active" preview={false}/>
+                <Image src="/images/sidebar/draft.svg" alt="draft" className="img-default" preview={false}/>
+                <span>Draft</span>
+              </a>
+            </Link>
           </li>
           <li>
-            <Link href="/processing" shallow={true}><a>Processing</a></Link>
+            <Link href="/processing">
+              <a>
+                <Image src="/images/sidebar/processing-green.svg" alt="processing"  className="img-active" preview={false}/>
+                <Image src="/images/sidebar/processing.svg" alt="processing" className="img-default" preview={false}/>
+                <span>Processing</span>
+              </a>
+            </Link>
           </li>
+          <li>
+            <Link href="/sent">
+              <a>
+                  <Image src="/images/sidebar/sent-green.svg" alt="sent"  className="img-active" preview={false}/>
+                <Image src="/images/sidebar/sent.svg" alt="sent" className="img-default" preview={false}/>
+                <span>Sent</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/received">
+              <a>
+                <Image src="/images/sidebar/received-green.svg" alt="received"  className="img-active" preview={false}/>
+                <Image src="/images/sidebar/received.svg" alt="received" className="img-default" preview={false}/>
+                <span>Received</span>
+              </a>
+            </Link>
+          </li>
+          <hr />
         </ul>
    
         <div className='sidebarBottom'>
