@@ -1,8 +1,10 @@
 import { Col, Row, Image, Menu } from 'antd';
 import Link from 'next/link';
+import { useRouter } from "next/router";
 
 export default function Sidebar(){
-  
+  const router = useRouter();
+
   return (
     <>
       <div className="main-sidebar">
@@ -12,7 +14,7 @@ export default function Sidebar(){
           </Col>
         </Row>
         <ul className="sidebar-list">
-          <li className='active'>
+          <li className={router.pathname == "/" ? "active" : ""}>
             <Link href="/">
               <a>
                 <Image src="/images/sidebar/all-jobs-green.svg" alt="All Jobs"  className="img-active" preview={false}/>
@@ -21,7 +23,7 @@ export default function Sidebar(){
               </a>
             </Link>
           </li>
-          <li>
+          <li className={router.pathname == "/draft" ? "active" : ""}>
             <Link href="/draft">
               <a>
                 <Image src="/images/sidebar/draft-green.svg" alt="draft"  className="img-active" preview={false}/>
@@ -30,7 +32,7 @@ export default function Sidebar(){
               </a>
             </Link>
           </li>
-          <li>
+          <li className={router.pathname == "/processing" ? "active" : ""}>
             <Link href="/processing">
               <a>
                 <Image src="/images/sidebar/processing-green.svg" alt="processing"  className="img-active" preview={false}/>
@@ -39,7 +41,7 @@ export default function Sidebar(){
               </a>
             </Link>
           </li>
-          <li>
+          <li className={router.pathname == "/sent" ? "active" : ""}>
             <Link href="/sent">
               <a>
                   <Image src="/images/sidebar/sent-green.svg" alt="sent"  className="img-active" preview={false}/>
@@ -48,7 +50,7 @@ export default function Sidebar(){
               </a>
             </Link>
           </li>
-          <li>
+          <li className={router.pathname == "/received" ? "active" : ""}>
             <Link href="/received">
               <a>
                 <Image src="/images/sidebar/received-green.svg" alt="received"  className="img-active" preview={false}/>
@@ -58,7 +60,7 @@ export default function Sidebar(){
             </Link>
           </li>
           <hr />
-          <li>
+          <li className={router.pathname == "/completed" ? "active" : ""}>
             <Link href="/completed">
               <a>
                   <Image src="/images/sidebar/completed-green.svg" alt="completed"  className="img-active" preview={false}/>
@@ -67,7 +69,7 @@ export default function Sidebar(){
               </a>
             </Link>
           </li>
-          <li>
+          <li className={router.pathname == "/cancelled" ? "active" : ""}>
             <Link href="/cancelled">
               <a>
                 <Image src="/images/sidebar/cancelled-green.svg" alt="cancelled"  className="img-active" preview={false}/>
@@ -76,7 +78,7 @@ export default function Sidebar(){
               </a>
             </Link>
           </li>
-          <li>
+          <li className={router.pathname == "/archived" ? "active" : ""}>
             <Link href="/archived">
               <a>
                 <Image src="/images/sidebar/archived-green.svg" alt="archived"  className="img-active" preview={false}/>
@@ -86,7 +88,7 @@ export default function Sidebar(){
             </Link>
           </li>
           <hr />
-          <li>
+          <li className={router.pathname == "/approvals" ? "active" : ""}>
             <Link href="/approvals">
               <a>
                 <Image src="/images/sidebar/approvals-green.svg" alt="approvals"  className="img-active" preview={false}/>
