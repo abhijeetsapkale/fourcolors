@@ -6,42 +6,46 @@
 .sidebar-logo{
   padding: 16px;
 }
-.sidebar-list li.ant-menu-item{
-  margin:0 !important;
-  padding: 0px 16px !important
-}
-.sidebar-list li.ant-menu-item:hover{
-  color: #fff;
-}
-.ant-menu.sidebar-list{
+.sidebar-list{
+  margin: 0;
+  padding: 0;
   background: transparent;   
   border: none; 
 }
-.ant-menu.sidebar-list li{
+.sidebar-list li a{
+  margin:0 !important;
+  padding: 10px 16px !important;
   width: 100%;
   display: block;
-  color: #FFFFFF;
+  color: #fff;
 }
-.ant-menu.sidebar-list li.ant-menu-item-selected{
+
+.sidebar-list li:hover{
+  color: #fff;
+  background-color:#243D4A;
+}
+
+.sidebar-list li.active{
   background-color:#243D4A;
   color: #22B27E;
 }
-.ant-menu.sidebar-list li.ant-menu-item-selected a{
+.sidebar-list li.active a{
   color: #22B27E;
 }
-.ant-menu.sidebar-list li.ant-menu-item-selected:after{
-  content: none;
+.sidebar-list li a .ant-image-img{
+  margin-right: 15px;
+  width: 16px;
 }
-.ant-menu-item .img-active{
+.sidebar-list li .img-active{
   display: none;
 }
-.ant-menu-item .img-default{
+.sidebar-list li .img-default{
   display: inline;
 }
-.ant-menu-item.ant-menu-item-selected .img-active{
+.sidebar-list li.active .img-active{
   display: inline;
 }
-.ant-menu-item.ant-menu-item-selected .img-default{
+.sidebar-list li.active .img-default{
   display: none;
 }
 .main-sidebar hr{

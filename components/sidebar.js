@@ -12,7 +12,7 @@ export default function Sidebar(){
           </Col>
         </Row>
         <ul className="sidebar-list">
-          <li>
+          <li className='active'>
             <Link href="/">
               <a>
                 <Image src="/images/sidebar/all-jobs-green.svg" alt="All Jobs"  className="img-active" preview={false}/>
@@ -58,13 +58,76 @@ export default function Sidebar(){
             </Link>
           </li>
           <hr />
+          <li>
+            <Link href="/completed">
+              <a>
+                  <Image src="/images/sidebar/completed-green.svg" alt="completed"  className="img-active" preview={false}/>
+                  <Image src="/images/sidebar/completed.svg" alt="completed" className="img-default" preview={false}/>
+                <span>Completed</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/cancelled">
+              <a>
+                <Image src="/images/sidebar/cancelled-green.svg" alt="cancelled"  className="img-active" preview={false}/>
+                <Image src="/images/sidebar/cancelled.svg" alt="cancelled" className="img-default" preview={false}/>
+                <span>Cancelled</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/archived">
+              <a>
+                <Image src="/images/sidebar/archived-green.svg" alt="archived"  className="img-active" preview={false}/>
+                <Image src="/images/sidebar/archived.svg" alt="archived" className="img-default" preview={false}/>
+                <span>Archived</span>
+              </a>
+            </Link>
+          </li>
+          <hr />
+          <li>
+            <Link href="/approvals">
+              <a>
+                <Image src="/images/sidebar/approvals-green.svg" alt="approvals"  className="img-active" preview={false}/>
+                <Image src="/images/sidebar/approvals.svg" alt="approvals" className="img-default" preview={false}/>
+                <span>Approvals</span>
+              </a>
+            </Link>
+          </li>
         </ul>
    
         <div className='sidebarBottom'>
-          
-       
+          <Row>
+            <Col span={24}>
+              <ul className="sidebar-list pb-10">
+                <li>
+                  <Link href="/">
+                    <a>
+                      <Image src="/images/sidebar/settings-green.svg" alt="settings"  className="img-active" preview={false}/>
+                      <Image src="/images/sidebar/settings.svg" alt="settings" className="img-default" preview={false}/>
+                      <span>Admin Center</span>
+                    </a>
+                  </Link>
+                </li>
+              </ul>
+            </Col>
+          </Row>
           <hr />
-         
+          <Row>
+            <Col span={24}>
+              <ul className="sidebar-list pb-10">
+                <li>
+                  <Link href="/">
+                    <a>
+                      <Image src="/images/sidebar/profile.png" alt="settings" preview={false}/>
+                      <span>FourColors Admin</span>
+                    </a>
+                  </Link>
+                </li>
+              </ul>
+            </Col>
+          </Row>
         </div>
       </div>
     </>
