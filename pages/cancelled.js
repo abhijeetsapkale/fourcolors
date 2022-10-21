@@ -1,7 +1,7 @@
 import Layout from '../components/layout';
+import SearchHeader from '../components/search';
 import Link from 'next/link';
-import { Table, Button, Dropdown, Menu, Image, Row, Col, Input, Space  } from 'antd';
-import { useRouter } from 'next/router'
+import { Table, Button, Dropdown, Menu, Image, Space  } from 'antd';
 
 
 export default function AllDocuments({  }) {
@@ -152,20 +152,14 @@ export default function AllDocuments({  }) {
         />
     );
         
-    const { Search } = Input;
-    const onSearch = (value) => console.log(value);
-    const router = useRouter();
-
-    const navigateDocument = () =>{
-        router.push('/upload')
-    }
+  
 
     return (
         <Layout>
             <header className='header'>
                 <h1>Cancelled</h1>
-                <Search placeholder="Search" onSearch={onSearch} allowClear />
-                <Space>
+                <SearchHeader></SearchHeader>
+                <Space className="header-right">
                     <Button>
                         <Space align="center">
                             <Image src="/images/export.svg" alt="export" height={11} width={10} preview={false} className="img-export"/> 

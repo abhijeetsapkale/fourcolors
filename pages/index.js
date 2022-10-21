@@ -1,9 +1,7 @@
 import Layout from '../components/layout';
+import SearchHeader from '../components/search';
 import Link from 'next/link';
-import { Table, Button, Dropdown, Menu, Image, Row, Col, Input, Space, Select, AutoComplete} from 'antd';
-import { useRouter } from 'next/router'
-import React, { useState } from 'react';
-const { Option } = AutoComplete;
+import { Table, Button, Dropdown, Menu, Image,  Space} from 'antd';
 
 
 export default function AllDocuments({  }) {
@@ -199,51 +197,13 @@ export default function AllDocuments({  }) {
         />
     );
         
-    const { Search } = Input;
-    const onSearch = (value) => console.log(value);
-    const router = useRouter();
 
-    const navigateDocument = () =>{
-        router.push('/upload')
-    }
-    const [result, setResult] = useState([]);
-  const handleSearch = (value) => {
-    let res = [];
-    if (!value || value.indexOf('@') >= 0) {
-      res = [];
-    } else {
-      res = ['lorem ipsum 1', 'lorem ipsum 2', 'lorem ipsum 3'].map((domain) => `${domain}`);
-    }
-    setResult(res);
-  };
     return (
         <Layout>
             <header className='header'>
                 <h1>All Jobs</h1>
-               
-                <Input.Group compact className='custom-search-wrap'>
-                    <Select defaultValue="1" className='custom-list'>
-                        <option value="1">All</option>
-                        <option value="2">Job id</option>
-                        <option value="3">Job Title</option>
-                    </Select>
-                    <AutoComplete className='custom-search'
-                        style={{
-                            width: 200,
-                        }}
-                        onSearch={handleSearch}
-                        placeholder="Search"
-                        >
-                        {result.map((email) => (
-                            <Option key={email} value={email}>
-                            {email}
-                            </Option>
-                        ))}
-                    </AutoComplete>
-                </Input.Group>
-               
-                
-                <Space>
+                <SearchHeader></SearchHeader>
+                <Space className="header-right">
                     <Button>
                         <Space align="center">
                             <Image src="/images/export.svg" alt="export" height={11} width={10} preview={false} className="img-export"/> 
