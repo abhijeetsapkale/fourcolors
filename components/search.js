@@ -1,15 +1,12 @@
 import { Input, Select, AutoComplete } from 'antd';
-import { useRouter } from 'next/router'
 import React, { useState } from 'react';
 const { Option } = AutoComplete;
 
 export default function Search() {
-  const { Search } = Input;
-  const onSearch = (value) => console.log(value);
-  const router = useRouter();
 
  
   const [result, setResult] = useState([]);
+  
   const handleSearch = (value) => {
     let res = [];
     if (!value || value.indexOf('@') >= 0) {
