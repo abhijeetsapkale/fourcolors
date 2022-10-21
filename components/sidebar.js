@@ -4,28 +4,15 @@ import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 
 export default function Layout({ children }) {
-  const items = [
-    {
-      label: 'All Jobs',
-      key: '1',
-
-    },
-    {
-      label: 'Draft',
-      key: '2',
-    }
-  ];
+  
   const router = useRouter();
-  const [current, setCurrent] = useState("1");
+
+  const [current, setCurrent] = useState("all-jobs");
+
   const onClick = (e) => {
     console.log('click ', e);
+
     setCurrent(e.key);
-    if(e.key == "1"){
-      router.push('/', undefined, { shallow: true });
-    }
-    else if(e.key == "2"){
-      router.push('/draft', undefined, { shallow: true });
-    }
   };
   return (
     <>
@@ -37,19 +24,19 @@ export default function Layout({ children }) {
         </Row>
         <Menu className="sidebar-list" onClick={onClick} selectedKeys={[current]}>
 
-          <Menu.Item key="1">
+          <Menu.Item key="all-jobs">
             <Image src="/images/sidebar/all-jobs-green.svg" alt="All Jobs"  className="img-active" preview={false}/>
             <Image src="/images/sidebar/all-jobs.svg" alt="All Jobs" className="img-default" preview={false}/>
             <span>All Jobs</span>
             <Link href="/"><a></a></Link>
           </Menu.Item>
-          <Menu.Item key="2" >
+          <Menu.Item key="draft" >
             <Image src="/images/sidebar/draft-green.svg" alt="draft"  className="img-active" preview={false}/>
             <Image src="/images/sidebar/draft.svg" alt="draft" className="img-default" preview={false}/>
             <span>Draft</span>
             <Link href="/draft"><a></a></Link>
           </Menu.Item>
-           <Menu.Item key="3">
+           <Menu.Item key="processing">
 
             <Image src="/images/sidebar/processing-green.svg" alt="processing"  className="img-active" preview={false}/>
             <Image src="/images/sidebar/processing.svg" alt="processing" className="img-default" preview={false}/>
@@ -57,7 +44,7 @@ export default function Layout({ children }) {
             <Link href="/processing"><a></a></Link>
 
           </Menu.Item>
-          <Menu.Item key="4">
+          <Menu.Item key="sent">
 
           <Image src="/images/sidebar/sent-green.svg" alt="sent"  className="img-active" preview={false}/>
             <Image src="/images/sidebar/sent.svg" alt="sent" className="img-default" preview={false}/>
@@ -66,7 +53,7 @@ export default function Layout({ children }) {
 
           </Menu.Item>
 
-          <Menu.Item key="5">
+          <Menu.Item key="received">
 
           <Image src="/images/sidebar/received-green.svg" alt="received"  className="img-active" preview={false}/>
             <Image src="/images/sidebar/received.svg" alt="received" className="img-default" preview={false}/>
@@ -74,7 +61,7 @@ export default function Layout({ children }) {
             <Link href="/received"><a></a></Link>
           </Menu.Item>
           <hr />
-          <Menu.Item key="6">
+          <Menu.Item key="completed">
 
           <Image src="/images/sidebar/completed-green.svg" alt="completed"  className="img-active" preview={false}/>
             <Image src="/images/sidebar/completed.svg" alt="completed" className="img-default" preview={false}/>
@@ -83,7 +70,7 @@ export default function Layout({ children }) {
 
 
           </Menu.Item>
-          <Menu.Item key="7">
+          <Menu.Item key="cancelled">
 
           <Image src="/images/sidebar/cancelled-green.svg" alt="cancelled"  className="img-active" preview={false}/>
             <Image src="/images/sidebar/cancelled.svg" alt="cancelled" className="img-default" preview={false}/>
@@ -92,14 +79,14 @@ export default function Layout({ children }) {
 
           </Menu.Item>
 
-          <Menu.Item key="8">
+          <Menu.Item key="archived">
           <Image src="/images/sidebar/archived-green.svg" alt="archived"  className="img-active" preview={false}/>
             <Image src="/images/sidebar/archived.svg" alt="archived" className="img-default" preview={false}/>
             <span>Archived</span>
             <Link href="/archived"><a></a></Link>
           </Menu.Item>
           <hr />
-          <Menu.Item key="9">
+          <Menu.Item key="approvals">
             <Image src="/images/sidebar/approvals-green.svg" alt="approvals"  className="img-active" preview={false}/>
             <Image src="/images/sidebar/approvals.svg" alt="approvals" className="img-default" preview={false}/>
             <span>Approvals</span>
@@ -111,7 +98,7 @@ export default function Layout({ children }) {
         <Row>
             <Col span={24}>
               <Menu mode="inline" className="sidebar-list pb-10">
-                <Menu.Item key="10">
+                <Menu.Item key="settings">
                   <Image src="/images/sidebar/settings-green.svg" alt="settings"  className="img-active" preview={false}/>
                   <Image src="/images/sidebar/settings.svg" alt="settings" className="img-default" preview={false}/>
                   <span>Admin Center</span>
@@ -123,7 +110,7 @@ export default function Layout({ children }) {
           <Row>
             <Col span={24}>
               <Menu mode="inline" className="sidebar-list pb-10">
-                <Menu.Item key="11">
+                <Menu.Item key="profile">
                   <Image src="/images/sidebar/profile.png" alt="settings" preview={false}/>
                   <span>FourColors Admin</span>
                 </Menu.Item>
