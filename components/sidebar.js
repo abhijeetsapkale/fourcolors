@@ -28,20 +28,20 @@ export default function Sidebar(){
             <Image src="/images/sidebar/all-jobs-green.svg" alt="All Jobs"  className="img-active" preview={false}/>
             <Image src="/images/sidebar/all-jobs.svg" alt="All Jobs" className="img-default" preview={false}/>
             <span>All Jobs</span>
-            <Link href="/"><a></a></Link>
+            {/* <Link href="/"><a></a></Link> */}
           </Menu.Item>
           <Menu.Item key="draft" >
             <Image src="/images/sidebar/draft-green.svg" alt="draft"  className="img-active" preview={false}/>
             <Image src="/images/sidebar/draft.svg" alt="draft" className="img-default" preview={false}/>
             <span>Draft</span>
-            <Link href="/draft"><a></a></Link>
+            {/* <Link href="/draft"><a></a></Link> */}
           </Menu.Item>
            <Menu.Item key="processing">
 
             <Image src="/images/sidebar/processing-green.svg" alt="processing"  className="img-active" preview={false}/>
             <Image src="/images/sidebar/processing.svg" alt="processing" className="img-default" preview={false}/>
             <span>Processing</span>
-            <Link href="/processing"><a></a></Link>
+            {/* <Link href="/processing"><a></a></Link> */}
 
           </Menu.Item>
           <Menu.Item key="sent">
@@ -49,7 +49,7 @@ export default function Sidebar(){
           <Image src="/images/sidebar/sent-green.svg" alt="sent"  className="img-active" preview={false}/>
             <Image src="/images/sidebar/sent.svg" alt="sent" className="img-default" preview={false}/>
             <span>Sent</span>
-            <Link href="/sent"><a></a></Link>
+            {/* <Link href="/sent"><a></a></Link> */}
 
           </Menu.Item>
 
@@ -58,7 +58,7 @@ export default function Sidebar(){
           <Image src="/images/sidebar/received-green.svg" alt="received"  className="img-active" preview={false}/>
             <Image src="/images/sidebar/received.svg" alt="received" className="img-default" preview={false}/>
             <span>Received</span>
-            <Link href="/received"><a></a></Link>
+            {/* <Link href="/received"><a></a></Link> */}
           </Menu.Item>
           <hr />
           <Menu.Item key="completed">
@@ -66,7 +66,7 @@ export default function Sidebar(){
           <Image src="/images/sidebar/completed-green.svg" alt="completed"  className="img-active" preview={false}/>
             <Image src="/images/sidebar/completed.svg" alt="completed" className="img-default" preview={false}/>
             <span>Completed</span>
-            <Link href="/completed"><a></a></Link>
+            {/* <Link href="/completed"><a></a></Link> */}
 
 
           </Menu.Item>
@@ -75,7 +75,7 @@ export default function Sidebar(){
           <Image src="/images/sidebar/cancelled-green.svg" alt="cancelled"  className="img-active" preview={false}/>
             <Image src="/images/sidebar/cancelled.svg" alt="cancelled" className="img-default" preview={false}/>
             <span>Cancelled</span>
-            <Link href="/cancelled"><a></a></Link>
+            {/* <Link href="/cancelled"><a></a></Link> */}
 
           </Menu.Item>
 
@@ -83,14 +83,14 @@ export default function Sidebar(){
           <Image src="/images/sidebar/archived-green.svg" alt="archived"  className="img-active" preview={false}/>
             <Image src="/images/sidebar/archived.svg" alt="archived" className="img-default" preview={false}/>
             <span>Archived</span>
-            <Link href="/archived"><a></a></Link>
+            {/* <Link href="/archived"><a></a></Link> */}
           </Menu.Item>
           <hr />
           <Menu.Item key="approvals">
             <Image src="/images/sidebar/approvals-green.svg" alt="approvals"  className="img-active" preview={false}/>
             <Image src="/images/sidebar/approvals.svg" alt="approvals" className="img-default" preview={false}/>
             <span>Approvals</span>
-            <Link href="/approvals"><a></a></Link>
+            {/* <Link href="/approvals"><a></a></Link> */}
           </Menu.Item>
         </Menu>
         <div className='sidebarBottom'>
