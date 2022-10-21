@@ -31,6 +31,17 @@ export default function Sidebar(){
             <Image src="/images/logo.svg" alt="Logo" height={33} width={120} preview={false} />
           </Col>
         </Row>
+        <ul>
+          <li>
+            <Link href="/"><a>All jobs</a></Link>
+          </li>
+          <li>
+            <Link href="/draft"><a>Draft</a></Link>
+          </li>
+          <li>
+            <Link href="/processing"><a>Processing</a></Link>
+          </li>
+        </ul>
         <Menu className="sidebar-list" onClick={onClick} selectedKeys={[current]}>
 
           <Menu.Item key="all-jobs">
