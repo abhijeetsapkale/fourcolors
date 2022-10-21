@@ -123,8 +123,8 @@
 }
 .table-1 tbody tr td .ant-btn:not([disabled]):hover {
   text-decoration: none;
-  background: #EEEEF0;
-  border-color: #EEEEF0;
+  background: #dfdfdf;
+  border-color: #dfdfdf;
 }
 .table-1 tbody tr td h3{
   font-weight: 600;
@@ -133,11 +133,11 @@
   margin-bottom: 2px;
 }
 .table-1 .ant-btn.btn-icon-round{
-  width: 27px;
-  height: 27px;
+  width: 30px;
+  height: 30px;
   border: none;
   padding: 0;
-  min-width:27px;
+  min-width:30px;
   box-shadow: none;
   background: #F0F2F4;
   border-radius: 5px;
