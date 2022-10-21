@@ -1,4 +1,4 @@
-import Layout from '../components/layout';
+import Sidebar from '../components/sidebar';
 import SearchHeader from '../components/search';
 import Link from 'next/link';
 import { Table, Button, Dropdown, Menu, Image,  Space} from 'antd';
@@ -199,25 +199,30 @@ export default function AllDocuments({  }) {
         
 
     return (
-        <Layout>
-            <header className='header'>
-                <h1>All Jobs</h1>
-                <SearchHeader></SearchHeader>
-                <Space className="header-right">
-                    <Button>
-                        <Space align="center">
-                            <Image src="/images/export.svg" alt="export" height={11} width={10} preview={false} className="img-export"/> 
-                            <span>Export</span>
+        <>
+            <div className='main-layout'>
+                <Sidebar></Sidebar>
+                <div>
+                    <header className='header'>
+                        <h1>All Jobs</h1>
+                        <SearchHeader></SearchHeader>
+                        <Space className="header-right">
+                            <Button>
+                                <Space align="center">
+                                    <Image src="/images/export.svg" alt="export" height={11} width={10} preview={false} className="img-export"/> 
+                                    <span>Export</span>
+                                </Space>
+                            </Button>
+                            <Button type='primary'>New Job</Button>
                         </Space>
-                    </Button>
-                    <Button type='primary'>New Job</Button>
-                </Space>
-            </header>
-            <main className='main-pad'>
-                <Table dataSource={dataSource} columns={columns}  pagination= { 
-                    {pageSizeOptions: ['2', '4', '6'], showSizeChanger: true, }
-                }  className="table-1"/>
-            </main>
-        </Layout>
+                    </header>
+                    <main className='main-pad'>
+                        <Table dataSource={dataSource} columns={columns}  pagination= { 
+                            {pageSizeOptions: ['2', '4', '6'], showSizeChanger: true, }
+                        }  className="table-1"/>
+                    </main>
+                </div>
+            </div>
+        </>
     )
 }

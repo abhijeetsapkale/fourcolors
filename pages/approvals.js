@@ -1,4 +1,4 @@
-import Layout from '../components/layout';
+import Sidebar from '../components/sidebar';
 import SearchHeader from '../components/search';
 import Link from 'next/link';
 import { Table, Button, Dropdown, Menu, Image, Space  } from 'antd';
@@ -168,7 +168,10 @@ export default function AllDocuments({  }) {
     );
   
     return (
-        <Layout>
+        <>
+            <div className='main-layout'>
+                <Sidebar></Sidebar>
+                <div>
             <header className='header'>
                 <h1>Approvals</h1>
                 <SearchHeader></SearchHeader>
@@ -185,6 +188,8 @@ export default function AllDocuments({  }) {
             <main className='main-pad'>
                 <Table dataSource={dataSource} columns={columns} pagination={false} className="table-1"/>
             </main>
-        </Layout>
+            </div>
+            </div>
+        </>
     )
 }

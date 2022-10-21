@@ -1,10 +1,10 @@
-import Layout from '../components/layout';
+import Sidebar from '../components/sidebar';
 import SearchHeader from '../components/search';
 import Link from 'next/link';
-import { Table, Button, Dropdown, Menu, Image, Space  } from 'antd';
+import { Table, Button, Dropdown, Menu, Image, Space } from 'antd';
 
 
-export default function AllDocuments({  }) {
+export default function AllDocuments({ }) {
 
     const columns = [
         {
@@ -25,27 +25,27 @@ export default function AllDocuments({  }) {
             dataIndex: 'status',
             key: 'status',
             render: status => {
-                if(status == "Ready for Download"){
+                if (status == "Ready for Download") {
                     return <span className='status light-green'>{' '}{status}</span>
                 }
-                else if(status == "Draft"){
+                else if (status == "Draft") {
                     return <span className='status light-purple'>{' '}{status}</span>
                 }
-                else if(status == "Failed"){
+                else if (status == "Failed") {
                     return <span className='status red'>{' '}{status}</span>
                 }
-                else if(status == "Cancelled"){
+                else if (status == "Cancelled") {
                     return <span className='status red'>{' '}{status}</span>
                 }
-                else if(status == "In Approval"){
+                else if (status == "In Approval") {
                     return <span className='status yellow'>{' '}{status}</span>
                 }
-                else if(status == "Received"){
+                else if (status == "Received") {
                     return <span className='status light-green'>{' '}{status}</span>
                 }
-            }, 
+            },
             width: '25%',
-            align:'center'
+            align: 'center'
         },
         {
             title: 'RECEIVER / COMPANY',
@@ -70,7 +70,7 @@ export default function AllDocuments({  }) {
             dataIndex: 'action',
             key: 'action',
             render: status => {
-                return <> 
+                return <>
                     <Space>
                         <Dropdown overlay={menu} trigger={['click']} className="btn-icon-round" placement="bottomRight">
                             <Button className="btn-icon-round">
@@ -96,7 +96,7 @@ export default function AllDocuments({  }) {
             status: 'Ready for Download',
             receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply'],
             initiator: 'User DX / External Co. 1',
-            action:''
+            action: ''
         },
         {
             key: '2',
@@ -108,7 +108,7 @@ export default function AllDocuments({  }) {
             status: 'Draft',
             receiver: 'NA',
             initiator: 'NA',
-            action:''
+            action: ''
         },
         {
             key: '3',
@@ -120,7 +120,7 @@ export default function AllDocuments({  }) {
             status: 'Failed',
             receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply'],
             initiator: 'User DX / External Co. 1',
-            action:''
+            action: ''
         },
         {
             key: '4',
@@ -132,7 +132,7 @@ export default function AllDocuments({  }) {
             status: 'In Approval',
             receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply'],
             initiator: 'User DX / External Co. 1',
-            action:''
+            action: ''
         },
         {
             key: '5',
@@ -144,7 +144,7 @@ export default function AllDocuments({  }) {
             status: 'Ready for Download',
             receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply'],
             initiator: 'User DX / External Co. 1',
-            action:''
+            action: ''
         },
         {
             key: '6',
@@ -156,65 +156,70 @@ export default function AllDocuments({  }) {
             status: 'Ready for Download',
             receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply'],
             initiator: 'User DX / External Co. 1',
-            action:''
+            action: ''
         }
     ];
-    
+
     const menu = (
         <Menu
-          items={[
-            {
-              key: '1',
-              label: (
-                <Link href="/">
-                    <a>
-                        1st menu item
-                    </a>
-                </Link>
-              ),
-            },
-            {
-              key: '2',
-              label: (
-                <Link href="/">
-                    <a>
-                        2nd menu item
-                    </a>
-                </Link>
-              )
-            },
-            {
-              key: '3',
-              label: (
-                <Link href="/">
-                    <a>
-                        3rd menu item
-                    </a>
-                </Link>
-              )
-            }
-          ]}
+            items={[
+                {
+                    key: '1',
+                    label: (
+                        <Link href="/">
+                            <a>
+                                1st menu item
+                            </a>
+                        </Link>
+                    ),
+                },
+                {
+                    key: '2',
+                    label: (
+                        <Link href="/">
+                            <a>
+                                2nd menu item
+                            </a>
+                        </Link>
+                    )
+                },
+                {
+                    key: '3',
+                    label: (
+                        <Link href="/">
+                            <a>
+                                3rd menu item
+                            </a>
+                        </Link>
+                    )
+                }
+            ]}
         />
     );
-        
+
     return (
-        <Layout>
-            <header className='header'>
-                <h1>Archived</h1>
-                <SearchHeader></SearchHeader>
-                <Space className="header-right">
-                    <Button>
-                        <Space align="center">
-                            <Image src="/images/export.svg" alt="export" height={11} width={10} preview={false} className="img-export"/> 
-                            <span>Export</span>
+        <>
+            <div className='main-layout'>
+                <Sidebar></Sidebar>
+                <div>
+                    <header className='header'>
+                        <h1>Archived</h1>
+                        <SearchHeader></SearchHeader>
+                        <Space className="header-right">
+                            <Button>
+                                <Space align="center">
+                                    <Image src="/images/export.svg" alt="export" height={11} width={10} preview={false} className="img-export" />
+                                    <span>Export</span>
+                                </Space>
+                            </Button>
+
                         </Space>
-                    </Button>
-                   
-                </Space>
-            </header>
-            <main className='main-pad'>
-                <Table dataSource={dataSource} columns={columns} pagination={false} className="table-1"/>
-            </main>
-        </Layout>
+                    </header>
+                    <main className='main-pad'>
+                        <Table dataSource={dataSource} columns={columns} pagination={false} className="table-1" />
+                    </main>
+                </div>
+            </div>
+        </>
     )
 }

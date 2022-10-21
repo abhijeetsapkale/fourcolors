@@ -1,10 +1,10 @@
-import Layout from '../components/layout';
+import Sidebar from '../components/sidebar';
 import SearchHeader from '../components/search';
 import Link from 'next/link';
-import { Table, Button, Dropdown, Menu, Image, Space  } from 'antd';
+import { Table, Button, Dropdown, Menu, Image, Space } from 'antd';
 
 
-export default function AllDocuments({  }) {
+export default function AllDocuments({ }) {
 
     const columns = [
         {
@@ -25,18 +25,18 @@ export default function AllDocuments({  }) {
             dataIndex: 'status',
             key: 'status',
             render: status => {
-                if(status == "Start Download"){
+                if (status == "Start Download") {
                     return <span className='status light-green'>{' '}{status}</span>
                 }
-                else if(status == "Download Complete"){
+                else if (status == "Download Complete") {
                     return <span className='status cyan'>{' '}{status}</span>
                 }
-                
-            }, 
+
+            },
             width: '25%',
-            align:'center'
+            align: 'center'
         },
-        
+
         {
             title: 'INITIATOR / COMPANY',
             dataIndex: 'initiator',
@@ -51,7 +51,7 @@ export default function AllDocuments({  }) {
             dataIndex: 'action',
             key: 'action',
             render: status => {
-                return <> 
+                return <>
                     <Space>
                         <Dropdown overlay={menu} trigger={['click']} className="btn-icon-round" placement="bottomRight">
                             <Button className="btn-icon-round">
@@ -75,9 +75,9 @@ export default function AllDocuments({  }) {
                 date: '11 Apr, 2022; 05:57'
             },
             status: 'Start Download',
-            
+
             initiator: 'User DX / External Co. 1',
-            action:''
+            action: ''
         },
         {
             key: '2',
@@ -87,69 +87,74 @@ export default function AllDocuments({  }) {
                 date: '11 Apr, 2022; 05:57'
             },
             status: 'Download Complete',
-            
+
             initiator: 'User DX / External Co. 1',
-            action:''
+            action: ''
         }
-        
+
     ];
-    
+
     const menu = (
         <Menu
-          items={[
-            {
-              key: '1',
-              label: (
-                <Link href="/">
-                    <a>
-                        1st menu item
-                    </a>
-                </Link>
-              ),
-            },
-            {
-              key: '2',
-              label: (
-                <Link href="/">
-                    <a>
-                        2nd menu item
-                    </a>
-                </Link>
-              )
-            },
-            {
-              key: '3',
-              label: (
-                <Link href="/">
-                    <a>
-                        3rd menu item
-                    </a>
-                </Link>
-              )
-            }
-          ]}
+            items={[
+                {
+                    key: '1',
+                    label: (
+                        <Link href="/">
+                            <a>
+                                1st menu item
+                            </a>
+                        </Link>
+                    ),
+                },
+                {
+                    key: '2',
+                    label: (
+                        <Link href="/">
+                            <a>
+                                2nd menu item
+                            </a>
+                        </Link>
+                    )
+                },
+                {
+                    key: '3',
+                    label: (
+                        <Link href="/">
+                            <a>
+                                3rd menu item
+                            </a>
+                        </Link>
+                    )
+                }
+            ]}
         />
     );
-        
-    
+
+
 
     return (
-        <Layout>
-            <header className='header'>
-                <h1>Received</h1>
-                <SearchHeader></SearchHeader>
-                <Space className="header-right">
-                    <Button>
-                        <Space align="center">
-                            <Image src="/images/export.svg" alt="export" height={11} width={10} preview={false} className="img-export"/> 
-                            <span>Export</span>
+        <>
+            <div className='main-layout'>
+                <Sidebar></Sidebar>
+                <div>
+                    <header className='header'>
+                        <h1>Received</h1>
+                        <SearchHeader></SearchHeader>
+                        <Space className="header-right">
+                            <Button>
+                                <Space align="center">
+                                    <Image src="/images/export.svg" alt="export" height={11} width={10} preview={false} className="img-export" />
+                                    <span>Export</span>
+                                </Space>
+                            </Button>
                         </Space>
-                    </Button>
-                </Space>
-            </header>
-            <main className='main-pad'>
-                <Table dataSource={dataSource} columns={columns} pagination={false} className="table-1"/>
-            </main>
-        </Layout>
+                    </header>
+                    <main className='main-pad'>
+                        <Table dataSource={dataSource} columns={columns} pagination={false} className="table-1" />
+                    </main>
+                </div>
+            </div>
+        </>
     )
 }
