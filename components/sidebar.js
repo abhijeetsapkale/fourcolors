@@ -33,13 +33,13 @@ export default function Sidebar(){
         </Row>
         <ul>
           <li>
-            <Link href="/"><a>All jobs</a></Link>
+            <Link href="/" shallow={true}><a>All jobs</a></Link>
           </li>
           <li>
-            <Link href="/draft"><a>Draft</a></Link>
+            <Link href="/draft" shallow={true}><a>Draft</a></Link>
           </li>
           <li>
-            <Link href="/processing"><a>Processing</a></Link>
+            <Link href="/processing" shallow={true}><a>Processing</a></Link>
           </li>
         </ul>
         <Menu className="sidebar-list" onClick={onClick} selectedKeys={[current]}>
