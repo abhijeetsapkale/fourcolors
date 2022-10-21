@@ -2,7 +2,7 @@ import Sidebar from '../components/sidebar';
 import SearchHeader from '../components/search';
 import Link from 'next/link';
 import { Table, Button, Dropdown, Menu, Image,  Space} from 'antd';
-
+import {EyeFilled, EllipsisOutlined } from '@ant-design/icons';
 
 export default function AllDocuments({  }) {
 
@@ -74,10 +74,10 @@ export default function AllDocuments({  }) {
                     <Space>
                         <Dropdown overlay={menu} trigger={['click']} className="btn-icon-round" placement="bottomRight">
                             <Button className="btn-icon-round">
-                                <Image src="/images/dot.svg" alt="Logo" height={3} width={14} preview={false} />
+                                <EllipsisOutlined />
                             </Button>
                         </Dropdown>
-                        <Button className="btn-icon-round"><Image src="/images/eye.svg" alt="Logo" height={8} width={11} preview={false} /></Button>
+                        <Button className="btn-icon-round"><EyeFilled /></Button>
                     </Space>
                 </>
             },

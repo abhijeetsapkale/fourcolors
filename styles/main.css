@@ -146,6 +146,9 @@
   position: relative;
   top: -2px;
 }
+.table-1 .ant-btn.btn-icon-round svg{
+  fill: #667085
+}
 .status{
   font-weight: 500;
   font-size: 13px;
@@ -431,5 +434,18 @@
   position: absolute;
   left: 0px;
   top: 7px;
+  z-index: 2;
+}
+.ant-select-arrow {
+  position: relative;
+}
+.ant-select-arrow .anticon-down{
+  display: none;
+}
+.ant-select-arrow::after{
+  content: url('../public/images/dropdown.svg');
+  position: absolute;
+  right: 0px;
+  top: -18px;
   z-index: 2;
 }
