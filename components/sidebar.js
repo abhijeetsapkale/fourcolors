@@ -13,6 +13,15 @@ export default function Sidebar(){
     console.log('click ', e);
 
     setCurrent(e.key);
+
+    if(e.key == "all-jobs"){
+      router.push('/');
+    } else if(e.key == "draft"){
+      router.push('/draft');
+    } else if(e.key == "processing"){
+      router.push('/processing');
+    }
+
   };
   return (
     <>
