@@ -52,7 +52,7 @@ export default function AllDocuments({ }) {
             dataIndex: 'receiver',
             key: 'receiver',
             render: receiver => {
-                return <p className='text-dark fw-500'>{receiver}</p>
+                return receiver.map((rc) =>  <p className='text-dark fw-500'>{rc}</p>)
             },
             width: '20%'
         },
@@ -106,7 +106,7 @@ export default function AllDocuments({ }) {
                 date: '11 Apr, 2022; 05:57'
             },
             status: 'Draft',
-            receiver: 'NA',
+            receiver: ['NA'],
             initiator: 'NA',
             action: ''
         },

@@ -10,7 +10,7 @@ export default function Sidebar(){
       <div className="main-sidebar">
         <Row align='middle' justify='space-between' className='sidebar-logo'>
           <Col>
-            <Image src="/images/logo.svg" alt="Logo" height={33} width={120} preview={false} />
+            <Image src="/images/logo.svg" alt="Logo" height={39} width={139} preview={false} />
           </Col>
         </Row>
         <ul className="sidebar-list">

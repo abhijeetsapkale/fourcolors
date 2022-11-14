@@ -55,7 +55,7 @@ export default function AllDocuments({ }) {
             dataIndex: 'receiver',
             key: 'receiver',
             render: receiver => {
-                return <p className='text-dark fw-500'>{receiver}</p>
+                return receiver.map((rc) =>  <p className='text-dark fw-500'>{rc}</p>)
             },
             width: '20%'
         },

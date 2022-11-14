@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { Table, Button, Dropdown, Menu, Image,  Space} from 'antd';
 
 
-export default function AllDocuments({  }) {
 
+export default function AllDocuments({  }) {
     const columns = [
         {
             title: 'JOB DETAILS',
@@ -52,7 +52,7 @@ export default function AllDocuments({  }) {
             dataIndex: 'receiver',
             key: 'receiver',
             render: receiver => {
-                return <p className='text-dark fw-500'>{receiver}</p>
+                return receiver.map((rc) =>  <p className='text-dark fw-500'>{rc}</p>)
             },
             width: '20%'
         },
@@ -220,6 +220,7 @@ export default function AllDocuments({  }) {
                         <Table dataSource={dataSource} columns={columns}  pagination= { 
                             {pageSizeOptions: ['2', '4', '6'], showSizeChanger: true, }
                         }  className="table-1"/>
+                        
                     </main>
                 </div>
             </div>
