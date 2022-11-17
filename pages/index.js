@@ -40,7 +40,8 @@ export default function AllDocuments({ }) {
             key: 'jobdetail',
             render: jobdetail => {
                 return <>
-                    <h3>{jobdetail.jobId}</h3>
+                    
+                    <Link href="#"><a><h3>{jobdetail.jobId}</h3></a></Link>
                     <p>{jobdetail.mainTitle}</p>
                     <p>{jobdetail.date}</p>
                 </>
