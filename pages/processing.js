@@ -2,11 +2,39 @@ import Sidebar from '../components/sidebar';
 import SearchHeader from '../components/search';
 import Link from 'next/link';
 import { Table, Button, Dropdown, Menu, Image, Space  } from 'antd';
+import React, { useState } from 'react';
+import { Resizable } from 'react-resizable';
 
+const ResizableTitle = (props) => {
+    const { onResize, width, ...restProps } = props;
+    if (!width) {
+        return <th {...restProps} />;
+    }
+    return (
+        <Resizable
+            width={width}
+            height={0}
+            handle={
+                <span
+                    className="react-resizable-handle"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                    }}
+                />
+            }
+            onResize={onResize}
+            draggableOpts={{
+                enableUserSelectHack: false,
+            }}
+        >
+            <th {...restProps} />
+        </Resizable>
+    );
+};
 
-export default function AllDocuments({  }) {
+export default function Processing({}) {
 
-    const columns = [
+    const [columns, setColumns] = useState([
         {
             title: 'JOB DETAILS',
             dataIndex: 'jobdetail',
@@ -18,7 +46,7 @@ export default function AllDocuments({  }) {
                     <p>{jobdetail.date}</p>
                 </>
             },
-            width: '25%'
+            width: 250
         },
         {
             title: 'Status',
@@ -30,7 +58,7 @@ export default function AllDocuments({  }) {
                 }
                 
             }, 
-            width: '25%',
+            width: 250,
             align:'center'
         },
         {
@@ -40,7 +68,7 @@ export default function AllDocuments({  }) {
             render: receiver => {
                 return receiver.map((rc) =>  <p className='text-dark fw-500' key={rc.id}>{rc}</p>)
             },
-            width: '20%'
+            width: 200
         },
         {
             title: 'INITIATOR / COMPANY',
@@ -49,7 +77,7 @@ export default function AllDocuments({  }) {
             render: initiator => {
                 return <p className='text-dark fw-500'>{initiator}</p>
             },
-            width: '20%'
+            width: 200
         },
         {
             title: 'ACTION',
@@ -67,9 +95,9 @@ export default function AllDocuments({  }) {
                     </Space>
                 </>
             },
-            width: '10%'
+            width: 100
         },
-    ];
+    ]);
 
     const dataSource = [
         {
@@ -135,7 +163,24 @@ export default function AllDocuments({  }) {
           ]}
         />
     );
-        
+
+    const handleResize =
+    (index) =>
+        (_, { size }) => {
+            const newColumns = [...columns];
+            newColumns[index] = {
+                ...newColumns[index],
+                width: size.width,
+            };
+            setColumns(newColumns);
+        };
+const mergeColumns = columns.map((col, index) => ({
+    ...col,
+    onHeaderCell: (column) => ({
+        width: column.width,
+        onResize: handleResize(index),
+    }),
+}));
    
 
     return (
@@ -156,7 +201,19 @@ export default function AllDocuments({  }) {
                         </Space>
                     </header>
                     <main className='main-pad'>
-                        <Table dataSource={dataSource} columns={columns} pagination={false} className="table-1"/>
+                        <Table
+                            components={{
+                                header: {
+                                    cell: ResizableTitle,
+                                },
+                            }}
+                            pagination= { 
+                                {pageSizeOptions: ['2', '4', '6'], showSizeChanger: true, }}
+                            columns={mergeColumns}
+                            dataSource={dataSource}
+                            className="table-1"
+                        />
+                        
                     </main>
                 </div>
             </div>

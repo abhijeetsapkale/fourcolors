@@ -2,12 +2,9 @@ import Sidebar from '../components/sidebar';
 import SearchHeader from '../components/search';
 import Link from 'next/link';
 import { Table, Button, Dropdown, Menu, Image, Space } from 'antd';
-// import ResizableAntdTable from 'resizable-antd-table';
-// import NoSSRWrapper from "../components/no-ssr-wrapper";
-
-import 'antd/dist/antd.css';
 import React, { useState } from 'react';
 import { Resizable } from 'react-resizable';
+
 const ResizableTitle = (props) => {
     const { onResize, width, ...restProps } = props;
     if (!width) {
@@ -34,6 +31,7 @@ const ResizableTitle = (props) => {
         </Resizable>
     );
 };
+
 export default function AllDocuments({ }) {
     const [columns, setColumns] = useState([
         {
@@ -265,7 +263,6 @@ export default function AllDocuments({ }) {
                             }  className="table-1"/> */}
 
                         <Table
-
                             components={{
                                 header: {
                                     cell: ResizableTitle,
