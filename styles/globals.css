@@ -50,39 +50,8 @@ a {
   color: #4E5461 !important;
 }
 
-.auth-logo{
-  position: absolute;
-  top: 15px;
-  left: 24px;
-}
-.auth-header{
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 29px;
-  letter-spacing: -0.01em;
-  color: #2B313F;
-  margin-bottom: 25px;
-}
-.auth-wrap{
-  width: calc(100% - 130px);
-  max-width: 400px;
-  margin: auto;
-}
-.auth-wrap label{
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-  color: #4E5461;
-}
-.auth-wrap .ant-input, .auth-wrap .ant-input-affix-wrapper{
-  border: 1px solid #D0D3D9;
-  border-radius: 6px;
-}
-.ant-input-lg, .auth-wrap .ant-input-affix-wrapper-lg{
-  padding: 7px 11px;
-  font-weight: 500;
-  font-size: 14px;
-}
+
+
 .ant-btn{
   padding: 0px 14px;
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
@@ -319,4 +288,23 @@ a {
 }
 .ant-pagination .ant-pagination-item-active a, .ant-pagination .ant-pagination-item-active a:hover{
   color: #101828;
+}
+.ant-checkbox-inner{
+  border-color: #667085;
+  border-radius: 4px;
+}
+.ant-checkbox-wrapper:hover .ant-checkbox-inner{
+  border-color: #667085;
+  border-radius: 4px;
+  box-shadow: none;
+}
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #22B27E;
+  border-color: #22B27E;
+  border-radius: 4px;
+  box-shadow: none;
+}
+.ant-checkbox-checked::after{
+  border-color: #22B27E;
+  border-radius: 4px;
 }

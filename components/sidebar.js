@@ -14,8 +14,8 @@ export default function Sidebar(){
           </Col>
         </Row>
         <ul className="sidebar-list">
-          <li className={router.pathname == "/" ? "active" : ""}>
-            <Link href="/">
+          <li className={router.pathname == "/all-jobs" ? "active" : ""}>
+            <Link href="/all-jobs">
               <a>
                 <Image src="/images/sidebar/all-jobs-green.svg" alt="All Jobs"  className="img-active" preview={false}/>
                 <Image src="/images/sidebar/all-jobs.svg" alt="All Jobs" className="img-default" preview={false}/>
