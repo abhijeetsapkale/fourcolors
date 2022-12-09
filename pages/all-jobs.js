@@ -4,12 +4,14 @@ import Link from 'next/link';
 import { Table, Button, Dropdown, Menu, Image, Space } from 'antd';
 import React, { useState } from 'react';
 import { Resizable } from 'react-resizable';
+import { useRouter } from 'next/router';
 
 const ResizableTitle = (props) => {
     const { onResize, width, ...restProps } = props;
     if (!width) {
         return <th {...restProps} />;
     }
+    
     return (
         <Resizable
             width={width}
@@ -33,6 +35,10 @@ const ResizableTitle = (props) => {
 };
 
 export default function AllDocuments({ }) {
+    const router = useRouter();
+    function goToNewJob() {
+        router.push('/new-job');
+    };
     const [columns, setColumns] = useState([
         {
             title: 'JOB DETAILS',
@@ -255,7 +261,7 @@ export default function AllDocuments({ }) {
                                     <span>Export</span>
                                 </Space>
                             </Button>
-                            <Button type='primary'>New Job</Button>
+                            <Button type="primary" onClick={goToNewJob}>New Job</Button>
                         </Space>
                     </header>
                     <main className='main-pad'>
