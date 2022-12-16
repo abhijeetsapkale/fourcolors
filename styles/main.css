@@ -500,11 +500,147 @@
   height: calc(100vh - 70px);
   padding: 20px;
 }
+.upload-part-1{
+  background: #fff;
+  min-height: calc(100vh - 55px);
+  display: flex;
+  justify-content: center;
+}
 .upload-part-2{
   padding: 20px;
+  min-height: calc(100vh - 55px);
   background: #fff;
-  min-height: 100vh;
 }
 .ant-upload.ant-upload-drag{
   background: #fff;
+}
+.new-job-right .ant-upload-list{
+  padding: 20px;
+  border: 1px solid #ECECEC;
+  border-radius: 5px;
+  background: #fff;
+}
+
+/* job detail */
+.job-detail-left{
+  height: calc(100vh - 50px);
+  padding: 20px;
+  background: #FFFFFF;
+}
+.job-detail-left h5{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #667085;
+}
+.job-detail-left h4{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #101828;
+}
+.job-detail-left ul{
+  margin: 0;
+  padding: 0;
+}
+.job-detail-left ul li{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: #F3F8FA;
+  border-radius: 2px;
+  margin-bottom: 8px;
+  padding: 4px 10px;
+}
+.job-detail-left ul li:nth-child(even){
+  background: #FBFEFF;;
+}
+.job-detail-left ul li:last-child{
+  margin-bottom: 0;
+}
+.job-detail-left ul li p{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #101828;
+  margin-bottom: 0;
+}
+.job-detail-left ul li span{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #101828;
+}
+.job-detail-right{
+  background: #FFFFFF;
+  padding: 20px;
+  border-left: 1px solid #F2F2F2;
+}
+.detail-main-title{
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #101828;
+  margin-bottom: 0;
+}
+.conversion-title{
+  background: #EAF0F3;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #101828;
+  letter-spacing: 0.02em;
+}
+.file-row{
+  background: #F2F2F2;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.file-row.outline{
+  background: #FFFFFF;
+  padding: 10px;
+  border: 1px solid #E0E0E0;
+  border-radius: 5px;
+}
+.file-row h4{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #101828;
+  margin-bottom: 5px;
+}
+.file-row h6{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 0;
+  color: #676767;
+}
+.status-percentage{
+  display: flex;
+}
+.status-text{
+  font-weight: 400;
+  font-size: 12px;
+  color: #8A8A8A;
+  margin: 0 8px;
+}
+.percentage-text{
+  font-weight: 400;
+  font-size: 12px;
+  color: #8A8A8A;
+}
+.total-target{
+  background: #DBDDE4;
+  border-radius: 5px;
+  padding:15px 20px;
+}
+.image-close .ant-image{
+  margin-left: 50px;
 }

@@ -414,3 +414,51 @@ label.label{
   border:1px solid #AABEB9;
   background: #E4F2EF;
 }
+
+/* ant upload */
+.ant-upload-list-picture .ant-upload-list-item-thumbnail img, 
+.ant-upload-list-picture-card .ant-upload-list-item-thumbnail img,
+.ant-upload-list-picture .ant-upload-list-item-thumbnail, 
+.ant-upload-list-picture-card .ant-upload-list-item-thumbnail {
+  width: 18px;
+  height: 25px;
+}
+.text-right{
+  text-align: right;
+}
+
+.ant-progress-success-bg, .ant-progress-bg {
+  background-color: #72C2EF;
+}
+.ant-progress-inner {
+  background-color: #C8DCE7 !important;
+}
+.ant-btn.ant-btn-outline-green, .ant-btn.ant-btn-outline-green:hover{
+  color: #289970;
+  border: 1px solid #289970;
+}
+.ant-btn.ant-btn-outline-green:hover {
+  background: #E4F2EF;
+  border: 1px solid #289970;
+}
+.card-border{
+  background: #FFFFFF;
+  border: 1px solid #ECECEC;
+  border-radius: 5px;
+  padding:15px 20px;
+  margin-top: 15px;
+}
+.ant-btn-link{
+  padding: 0;
+  color: #101828;
+  box-shadow: none;
+}
+.mt-20{
+  margin-top: 20px;
+}
+.d-none{
+  display: none !important;
+}
+.d-block{
+  display: block !important;
+}
