@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Table, Button, Dropdown, Menu, Image, Space, Row, Col, Form, Input, Select, message, Upload, Progress } from 'antd';
 import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 const { TextArea } = Input;
 
 const { Dragger } = Upload;
@@ -38,7 +39,9 @@ export default function NewJob({ }) {
         },
     ];
     const [data, setData] = useState(fileList);
-    const [showfilelist, setShowfilelist] = React.useState(false)
+    const [showfilelist, setShowfilelist] = useState(false);
+    const [loading, setLoading] = useState(false);
+
     const props = {
         name: 'file',
         multiple: true,
@@ -62,7 +65,14 @@ export default function NewJob({ }) {
             }
         }
     };
-
+    const router = useRouter();
+   
+    function send(){
+        setLoading(true);
+        setTimeout(() => {
+            router.push('/all-jobs')
+        }, 1000);
+    };
     return (
         <>
             <main className='new-job'>
@@ -81,7 +91,7 @@ export default function NewJob({ }) {
                         <Col>
                             <Space size={15}>
                                 <Button type='secondary'>Save As Draft</Button>
-                                <Button type="primary">Send</Button>
+                                <Button type="primary" onClick={send}>Send</Button>
                             </Space>
                         </Col>
                     </Row>
@@ -313,6 +323,9 @@ export default function NewJob({ }) {
                     </div>
                 </section>
             </main>
+            <div className={`file-loading ${loading ? "d-flex" : "d-none"}`}>
+                <Image src="images/loader.gif"  preview={false}/>
+            </div>
         </>
     )
 }
