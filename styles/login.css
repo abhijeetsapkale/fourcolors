@@ -102,3 +102,6 @@ form .ant-form-item{
   font-weight: 500;
 font-size: 16px;
 }
+.ant-input-password-large .ant-input.ant-input-lg {
+  min-height: 20px;
+}
