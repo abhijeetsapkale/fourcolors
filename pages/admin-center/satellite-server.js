@@ -8,7 +8,7 @@ const { TextArea } = Input;
 
 
 
-export default function CadProcessor({ }) {
+export default function SatelliteServer({ }) {
     // drawer1
     const [open1, setOpen1] = useState(false);
     const show1 = () => {
@@ -143,7 +143,7 @@ export default function CadProcessor({ }) {
                     <main className='main-pad'>
                         <div className='card-grid'>
                             <div className='card-wrap'>
-                                <Modal title="CAD processor Details" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} centered footer={null}>
+                                <Modal title="Satellite Server Details" open={isModalOpen} onOk={handleOk} onCancel={handleCancel} centered footer={null}>
                                 <div className='modal-detail-wrap'>
                                     <Row>
                                         <Col span="24">
@@ -153,8 +153,8 @@ export default function CadProcessor({ }) {
                                     </Row>
                                     <Row className='mt-25'>
                                         <Col span="12">
-                                            <h5>Availability</h5>
-                                            <h4>CATIA</h4>
+                                            <h5>Server IP</h5>
+                                            <h4>http://localhost8449</h4>
                                         </Col>
                                         <Col span="12">
                                             <h5>Location</h5>
@@ -184,7 +184,7 @@ export default function CadProcessor({ }) {
                                             <h5 className='mb-0'>San Francisco, California</h5>
                                         </Space>
                                         <Divider className='my-15'/>
-                                        <h4>CATIA</h4>
+                                        <h4>http://localhost8449</h4>
                                         <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                                     </Col>
                                 </Row>
@@ -210,7 +210,7 @@ export default function CadProcessor({ }) {
                                             <h5 className='mb-0'>San Francisco, California</h5>
                                         </Space>
                                         <Divider className='my-15'/>
-                                        <h4>CATIA</h4>
+                                        <h4>http://localhost8449</h4>
                                         <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                                     </Col>
                                 </Row>
@@ -237,7 +237,7 @@ export default function CadProcessor({ }) {
                                             <h5 className='mb-0'>San Francisco, California</h5>
                                         </Space>
                                         <Divider className='my-15'/>
-                                        <h4>CATIA</h4>
+                                        <h4>http://localhost8449</h4>
                                         <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                                     </Col>
                                 </Row>
@@ -263,7 +263,7 @@ export default function CadProcessor({ }) {
                                             <h5 className='mb-0'>San Francisco, California</h5>
                                         </Space>
                                         <Divider className='my-15'/>
-                                        <h4>CATIA</h4>
+                                        <h4>http://localhost8449</h4>
                                         <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                                     </Col>
                                 </Row>

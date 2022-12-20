@@ -469,3 +469,12 @@ label.label{
 .mt-10{
   margin-top: 10px;
 }
+.ant-modal-header{
+  background: #242A41;
+}
+.ant-modal-header .ant-modal-title{
+  color: #fff;
+}
+.ant-modal-content .anticon-close svg{
+  fill: #fff;
+}
