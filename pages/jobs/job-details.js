@@ -44,7 +44,7 @@ export default function JobDetails({ }) {
                     <Row justify="space-between" align="middle">
                         <Col>
                             <Space>
-                                <Link href="/all-jobs">
+                                <Link href="/jobs/all-jobs">
                                     <a>
                                         <Image src="/images/back.svg" alt="Logo" height={12} width={6} preview={false} />
                                     </a>

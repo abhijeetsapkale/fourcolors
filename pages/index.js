@@ -8,7 +8,7 @@ import {Form, Input, Button, Col, Row, Image, Checkbox, Space } from 'antd';
 export default function Login({ }) {
     const router = useRouter();
     function goTOAllJobs() {
-        router.push('/all-jobs');
+        router.push('/jobs/all-jobs');
     };
     return (
         <>

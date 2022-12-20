@@ -70,7 +70,7 @@ export default function NewJob({ }) {
     function send(){
         setLoading(true);
         setTimeout(() => {
-            router.push('/all-jobs')
+            router.push('/jobs/draft')
         }, 1000);
     };
     return (
@@ -80,12 +80,12 @@ export default function NewJob({ }) {
                     <Row justify="space-between" align="middle">
                         <Col>
                             <Space>
-                                <Link href="/all-jobs">
+                                <Link href="/jobs/all-jobs">
                                     <a>
                                         <Image src="/images/back.svg" alt="Logo" height={12} width={6} preview={false} />
                                     </a>
                                 </Link>
-                                <h2>Create new Job</h2>
+                                <h2>Edit Draft</h2>
                             </Space>
                         </Col>
                         <Col>
@@ -102,7 +102,7 @@ export default function NewJob({ }) {
                             <Row className='mb-25'>
                                 <Col span="24">
                                     <label className='label'>Job Title</label>
-                                    <Input placeholder="Enter job title" size='large' />
+                                    <Input placeholder="Enter Job Title" size='large' value="TC Job Document Item"/>
                                 </Col>
                             </Row>
                             <Row className='mb-25'>
@@ -112,7 +112,7 @@ export default function NewJob({ }) {
                                         showSearch="true"
                                         mode="multiple"
                                         className='custom-select'
-                                        placeholder="Select Channel"
+                                        placeholder="Select Recevier"
                                         size='large'
                                         options={[
                                             {
@@ -167,13 +167,13 @@ export default function NewJob({ }) {
                             <Row className='mb-25'>
                                 <Col span="24">
                                     <label className='label'>Program Manager</label>
-                                    <Input placeholder="Enter program manager name" size='large' />
+                                    <Input placeholder="Enter Program Manager Name" size='large' />
                                 </Col>
                             </Row>
                             <Row className='mb-25'>
                                 <Col span="24">
                                     <label className='label'>Description</label>
-                                    <TextArea rows={4} placeholder="Enter a description..." size='large' />
+                                    <TextArea rows={4} placeholder="Enter a Description..." size='large' />
                                 </Col>
                             </Row>
                         </div>
@@ -324,7 +324,7 @@ export default function NewJob({ }) {
                 </section>
             </main>
             <div className={`file-loading ${loading ? "d-flex" : "d-none"}`}>
-                <Image src="images/loader.gif"  preview={false}/>
+                <Image src="/images/loader.gif"  preview={false}/>
             </div>
         </>
     )

@@ -1,5 +1,5 @@
-import Sidebar from '../components/sidebar';
-import SearchHeader from '../components/search';
+import Sidebar from '../../components/sidebar';
+import SearchHeader from '../../components/search';
 import Link from 'next/link';
 import { Table, Button, Dropdown, Menu, Image, Space } from 'antd';
 import React, { useState } from 'react';
@@ -37,7 +37,7 @@ const ResizableTitle = (props) => {
 export default function AllDocuments({ }) {
     const router = useRouter();
     function goToNewJob() {
-        router.push('/new-job');
+        router.push('/jobs/new-job');
     };
     const [columns, setColumns] = useState([
         {

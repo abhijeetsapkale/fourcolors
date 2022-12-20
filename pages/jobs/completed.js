@@ -1,5 +1,5 @@
-import Sidebar from '../components/sidebar';
-import SearchHeader from '../components/search';
+import Sidebar from '../../components/sidebar';
+import SearchHeader from '../../components/search';
 import Link from 'next/link';
 import { Table, Button, Dropdown, Menu, Image, Space } from 'antd';
 import React, { useState } from 'react';
@@ -91,7 +91,7 @@ export default function Completed({ }) {
                                 <Image src="/images/dot.svg" alt="Logo" height={3} width={14} preview={false} />
                             </Button>
                         </Dropdown>
-                        <Button className="btn-icon-round"><Image src="/images/eye.svg" alt="Logo" height={8} width={11} preview={false} /></Button>
+                        <Link href="job-details"><a><Button className="btn-icon-round"><Image src="/images/eye.svg" alt="Logo" height={8} width={11} preview={false} /></Button></a></Link>
                     </Space>
                 </>
             },
