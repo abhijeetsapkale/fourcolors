@@ -253,7 +253,7 @@ export default function NewJob({ }) {
                                                         </Space>
                                                     </Col>
                                                     <Col span={8} className="text-right">
-                                                        {data.percent == '100' ? <b>Completed</b> : <div className='status-percentage image-close'> <Progress percent={data.percent} showInfo={false}/><Image src="images/close.svg" preview={false}/></div> }
+                                                        {data.percent == '100' ? <b>Completed</b> : <div className='status-percentage image-close'> <Progress percent={data.percent} showInfo={false}/><Image src="/images/close.svg" preview={false}/></div> }
                                                     </Col>
                                                </Row>
                                             </>
@@ -311,7 +311,7 @@ export default function NewJob({ }) {
                                                         </Space>
                                                     </Col>
                                                     <Col span={8} className="text-right">
-                                                        {data.percent == '100' ? <b>Completed</b> : <div className='status-percentage image-close'> <Progress percent={data.percent} showInfo={false}/><Image src="images/close.svg" preview={false}/></div> }
+                                                        {data.percent == '100' ? <b>Completed</b> : <div className='status-percentage image-close'> <Progress percent={data.percent} showInfo={false}/><Image src="/images/close.svg" preview={false}/></div> }
                                                     </Col>
                                                </Row>
                                             </>
