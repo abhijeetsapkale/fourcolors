@@ -474,7 +474,7 @@ button.ant-btn-link{
 .mt-10{
   margin-top: 10px;
 }
-.ant-modal-header{
+div.ant-modal-header{
   background: #242A41;
 }
 .ant-modal-header .ant-modal-title{
