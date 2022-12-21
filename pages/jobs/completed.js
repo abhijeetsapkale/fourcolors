@@ -131,33 +131,31 @@ export default function Completed({ }) {
             items={[
                 {
                     key: '1',
-                    label: (
-                        <Link href="/">
-                            <a>
-                                1st menu item
-                            </a>
-                        </Link>
-                    ),
+                    label: (<Link href="/"><a><Image src='/images/edit.svg' width={12} height={12}/> Edit</a></Link>),
                 },
                 {
                     key: '2',
-                    label: (
-                        <Link href="/">
-                            <a>
-                                2nd menu item
-                            </a>
-                        </Link>
-                    )
+                    label: (<Link href="/"><a><Image src='/images/delete.svg' width={12} height={12}/> Delete</a></Link>)
                 },
                 {
                     key: '3',
-                    label: (
-                        <Link href="/">
-                            <a>
-                                3rd menu item
-                            </a>
-                        </Link>
-                    )
+                    label: (<Link href="/"><a><Image src='/images/download.svg' width={12} height={12}/> Download</a></Link>)
+                },
+                {
+                    key: '4',
+                    label: (<Link href="/"><a><Image src='/images/forward.svg' width={12} height={12}/> Forward</a></Link>),
+                },
+                {
+                    key: '5',
+                    label: (<Link href="/"><a><Image src='/images/restart.svg' width={12} height={12}/> Restart</a></Link>)
+                },
+                {
+                    key: '6',
+                    label: (<Link href="/"><a><Image src='/images/events.svg' width={12} height={12}/> Events</a></Link>)
+                },
+                {
+                    key: '7',
+                    label: (<Link href="/"><a><Image src='/images/export-pdf.svg' width={12} height={12}/> Export to PDF</a></Link>)
                 }
             ]}
         />

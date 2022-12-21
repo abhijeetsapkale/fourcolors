@@ -1,7 +1,7 @@
 import Sidebar from '../../components/admin-sidebar';
 import SearchHeader from '../../components/search';
 import Link from 'next/link';
-import { Divider, Button, Dropdown, Menu, Image, Space, Drawer, Row, Col, Input, Select, Modal } from 'antd';
+import { Divider, Button, Dropdown, Menu, Image, Space, Drawer, Row, Col, Input, Select, Modal, Tooltip } from 'antd';
 import React, { useState } from 'react';
 import { Resizable } from 'react-resizable';
 const { TextArea } = Input;
@@ -32,25 +32,25 @@ export default function CadProcessor({ }) {
                 {
                     key: '1',
                     label: (
-                        <Link href="/"><a>Edit</a></Link>
+                        <Link href="/"><a><Image src='/images/edit.svg' width={12} height={12}/> Edit</a></Link>
                     ),
                 },
                 {
                     key: '2',
                     label: (
-                        <Link href="/"><a>Delete</a></Link>
+                        <Link href="/"><a><Image src='/images/delete.svg' width={12} height={12}/> Delete</a></Link>
                     )
                 },
                 {
                     key: '3',
                     label: (
-                        <Link href="/"><a>Active</a></Link>
+                        <Link href="/"><a><Image src='/images/active.svg' width={12} height={12}/> Active</a></Link>
                     )
                 },
                 {
                     key: '4',
                     label: (
-                        <Link href="/"><a>Deactive</a></Link>
+                        <Link href="/"><a><Image src='/images/deactive.svg' width={12} height={12}/> Deactive</a></Link>
                     )
                 }
             ]}
@@ -147,7 +147,8 @@ export default function CadProcessor({ }) {
                                 <div className='modal-detail-wrap'>
                                     <Row>
                                         <Col span="24">
-                                            <h5>Name</h5>
+                                            
+                                                <h5>Name</h5>
                                             <h3>NX HQM 1</h3>
                                         </Col>
                                     </Row>
@@ -178,12 +179,14 @@ export default function CadProcessor({ }) {
                                 </Modal>
                                 <Row>
                                     <Col span="24">
-                                        <h3>NX  HQM 1</h3>
-                                        <Space>
-                                            <Image src="/images/map.svg" alt="export" height={11} width={10} preview={false} className="img-export" />
-                                            <h5 className='mb-0'>San Francisco, California</h5>
-                                        </Space>
-                                        <Divider className='my-15'/>
+                                        <Tooltip title="Name" placement="bottom" color="#242A41"><h3>NX  HQM 1</h3></Tooltip>
+                                        <Tooltip title="Description" placement="bottom" color="#242A41">
+                                            <Space>
+                                                <Image src="/images/map.svg" alt="export" height={11} width={10} preview={false} className="img-export" />
+                                                <h5 className='mb-0'>San Francisco, California</h5>
+                                            </Space>
+                                        </Tooltip>
+                                        <Divider className='my-10'/>
                                         <h4>CATIA</h4>
                                         <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                                     </Col>
@@ -204,12 +207,14 @@ export default function CadProcessor({ }) {
                             <div className='card-wrap'>
                                 <Row>
                                     <Col span="24">
-                                        <h3>NX  HQM 1</h3>
-                                        <Space>
-                                            <Image src="/images/map.svg" alt="export" height={11} width={10} preview={false} className="img-export" />
-                                            <h5 className='mb-0'>San Francisco, California</h5>
-                                        </Space>
-                                        <Divider className='my-15'/>
+                                        <Tooltip title="Name" placement="bottom" color="#242A41"><h3>NX  HQM 1</h3></Tooltip>
+                                        <Tooltip title="Description" placement="bottom" color="#242A41">
+                                            <Space>
+                                                <Image src="/images/map.svg" alt="export" height={11} width={10} preview={false} className="img-export" />
+                                                <h5 className='mb-0'>San Francisco, California</h5>
+                                            </Space>
+                                        </Tooltip>
+                                        <Divider className='my-10'/>
                                         <h4>CATIA</h4>
                                         <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                                     </Col>
@@ -236,7 +241,7 @@ export default function CadProcessor({ }) {
                                             <Image src="/images/map.svg" alt="export" height={11} width={10} preview={false} className="img-export" />
                                             <h5 className='mb-0'>San Francisco, California</h5>
                                         </Space>
-                                        <Divider className='my-15'/>
+                                        <Divider className='my-10'/>
                                         <h4>CATIA</h4>
                                         <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                                     </Col>
@@ -262,7 +267,7 @@ export default function CadProcessor({ }) {
                                             <Image src="/images/map.svg" alt="export" height={11} width={10} preview={false} className="img-export" />
                                             <h5 className='mb-0'>San Francisco, California</h5>
                                         </Space>
-                                        <Divider className='my-15'/>
+                                        <Divider className='my-10'/>
                                         <h4>CATIA</h4>
                                         <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                                     </Col>

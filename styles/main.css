@@ -20,6 +20,7 @@
   color: #fff;
   font-size: 14px;
   font-weight: 500;
+  position: relative;
 }
 
 .sidebar-list li:hover{
@@ -187,8 +188,8 @@
   background: #E7F1FF;
 }
 .status.light-green{
-  color: #168966;
-  background: #ECFFF4;
+  color: #1E7E5E;
+  background: #EAF8F3;
 }
 .status.orange{
   color: #C87B22;
@@ -211,8 +212,7 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
-  letter-spacing: -0.01em;
-  color: #4E5461;
+  color: #183047;
   margin-bottom: 0;
 }
 
@@ -363,6 +363,9 @@
 }
 .ant-table-tbody > tr.ant-table-row:hover > td, .ant-table-tbody > tr > td.ant-table-cell-row-hover{
   background: #F5FAFF;
+}
+.ant-table-tbody > tr > td {
+  border-bottom: 5px solid #F4F4F4;
 }
 .custom-search-wrap{
   width: 400px;
@@ -601,7 +604,7 @@
 .total-target{
   background: #DBDDE4;
   border-radius: 5px;
-  padding:15px 20px;
+  padding:10px 20px;
 }
 .image-close .ant-image{
   margin-left: 50px;
@@ -730,6 +733,13 @@
   background: #FFFFFF;
   border-radius: 5px;
   padding: 15px;
+  border: 1px solid #fff;
+}
+.card-wrap:hover{
+  border: 1px solid #E0E0E0;
+}
+.card-wrap .status{
+  cursor: pointer;
 }
 .btn-icon-dot{
   width: 27px;
@@ -744,6 +754,7 @@
   font-size: 16px;
   color: #101828;
   margin-bottom: 5px;
+  width: max-content;
 }
 .card-wrap h4{
   font-weight: 500;
@@ -754,6 +765,7 @@
   font-weight: 500;
   font-size: 13px;
   line-height: 18px;
+  color: #667085;
 }
 .card-wrap p{
   font-weight: 400;
@@ -775,4 +787,46 @@
   font-weight: 600;
   font-size: 16px;
   color: #101828;
+}
+.filter-list{
+  margin-bottom: 15px;
+}
+.filter-list ul{
+  margin: 0;
+  padding:0;
+  list-style-type: none;
+}
+.filter-list ul li{
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: 400;
+  font-size: 13px;
+  color: #101828;
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+.filter-list ul li.active{
+  font-weight: 600;
+  font-size: 13px;
+  color: #101828;
+  background: #CED5F0;
+  border: 1px solid #CED5F0;
+}
+.notification-badge{
+  font-weight: 600;
+  font-size: 12px;
+  color: #FFFFFF;
+  display: inline-block;
+  width: 22px;
+  height: 18px;
+  background: #454C65;
+  border-radius: 40px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 20px;
 }

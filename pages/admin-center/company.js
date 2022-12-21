@@ -361,7 +361,7 @@ export default function Users({ }) {
                                                 </Select>
                                             </Col>
                                         </Row>       
-                                        <Row className='mb-25'>
+                                        <Row className='mb-25' gutter={20}>
                                             <Col span="12">
                                                 <label className='label'>City</label>
                                                 <Input placeholder="Enter your city" size='large' />
@@ -371,7 +371,7 @@ export default function Users({ }) {
                                                 <Input placeholder="Enter your country" size='large' />
                                             </Col>
                                         </Row>
-                                        <Row className='mb-25'>
+                                        <Row className='mb-25' gutter={20}>
                                             <Col span="12">
                                                 <label className='label'>Zip Code</label>
                                                 <Input placeholder="Enter your zip code" size='large' />

@@ -32,25 +32,25 @@ export default function SatelliteServer({ }) {
                 {
                     key: '1',
                     label: (
-                        <Link href="/"><a>Edit</a></Link>
+                        <Link href="/"><a><Image src='/images/edit.svg' width={12} height={12}/> Edit</a></Link>
                     ),
                 },
                 {
                     key: '2',
                     label: (
-                        <Link href="/"><a>Delete</a></Link>
+                        <Link href="/"><a><Image src='/images/delete.svg' width={12} height={12}/> Delete</a></Link>
                     )
                 },
                 {
                     key: '3',
                     label: (
-                        <Link href="/"><a>Active</a></Link>
+                        <Link href="/"><a><Image src='/images/active.svg' width={12} height={12}/> Active</a></Link>
                     )
                 },
                 {
                     key: '4',
                     label: (
-                        <Link href="/"><a>Deactive</a></Link>
+                        <Link href="/"><a><Image src='/images/deactive.svg' width={12} height={12}/> Deactive</a></Link>
                     )
                 }
             ]}
@@ -183,7 +183,7 @@ export default function SatelliteServer({ }) {
                                             <Image src="/images/map.svg" alt="export" height={11} width={10} preview={false} className="img-export" />
                                             <h5 className='mb-0'>San Francisco, California</h5>
                                         </Space>
-                                        <Divider className='my-15'/>
+                                        <Divider className='my-10'/>
                                         <h4>http://localhost8449</h4>
                                         <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                                     </Col>
@@ -209,7 +209,7 @@ export default function SatelliteServer({ }) {
                                             <Image src="/images/map.svg" alt="export" height={11} width={10} preview={false} className="img-export" />
                                             <h5 className='mb-0'>San Francisco, California</h5>
                                         </Space>
-                                        <Divider className='my-15'/>
+                                        <Divider className='my-10'/>
                                         <h4>http://localhost8449</h4>
                                         <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                                     </Col>
@@ -236,7 +236,7 @@ export default function SatelliteServer({ }) {
                                             <Image src="/images/map.svg" alt="export" height={11} width={10} preview={false} className="img-export" />
                                             <h5 className='mb-0'>San Francisco, California</h5>
                                         </Space>
-                                        <Divider className='my-15'/>
+                                        <Divider className='my-10'/>
                                         <h4>http://localhost8449</h4>
                                         <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                                     </Col>
@@ -262,7 +262,7 @@ export default function SatelliteServer({ }) {
                                             <Image src="/images/map.svg" alt="export" height={11} width={10} preview={false} className="img-export" />
                                             <h5 className='mb-0'>San Francisco, California</h5>
                                         </Space>
-                                        <Divider className='my-15'/>
+                                        <Divider className='my-10'/>
                                         <h4>http://localhost8449</h4>
                                         <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                                     </Col>

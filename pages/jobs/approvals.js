@@ -43,7 +43,6 @@ export default function Approvals({  }) {
                 return <>
                     <h3>{jobdetail.jobId}</h3>
                     <p>{jobdetail.mainTitle}</p>
-                    <p>{jobdetail.date}</p>
                 </>
             },
             width: 250
@@ -70,20 +69,36 @@ export default function Approvals({  }) {
             align:'center'
         },
         {
-            title: 'RECEIVER / COMPANY',
-            dataIndex: 'receiver',
-            key: 'receiver',
-            render: receiver => {
-                return receiver.map((rc) =>  <p className='text-dark fw-500' key={rc.id} >{rc}</p>)
+            title: 'SENDER COMPANY',
+            dataIndex: 'sender',
+            key: 'sender',
+            render: sender => {
+                return <>
+                    <p>{sender}</p>
+                </>
             },
             width: 200
         },
         {
-            title: 'INITIATOR / COMPANY',
-            dataIndex: 'initiator',
-            key: 'initiator',
-            render: initiator => {
-                return <p className='text-dark fw-500'>{initiator}</p>
+            title: 'RECEIVER COMPANY',
+            dataIndex: 'receiver',
+            key: 'receiver',
+            render: receiver => {
+                return <>
+                    <p>{receiver}</p>
+                </>
+            },
+            width: 200
+        },
+        {
+            title: 'SUBMISSION',
+            dataIndex: 'submission',
+            key: 'submission',
+            render: submission => {
+                return <>
+                    <p>{submission.user}</p>
+                    <p>{submission.date}</p>
+                </>
             },
             width: 200
         },
@@ -94,11 +109,6 @@ export default function Approvals({  }) {
             render: status => {
                 return <> 
                     <Space>
-                        <Dropdown overlay={menu} trigger={['click']} className="btn-icon-round" placement="bottomRight">
-                            <Button className="btn-icon-round">
-                                <Image src="/images/dot.svg" alt="Logo" height={4} width={14} preview={false} />
-                            </Button>
-                        </Dropdown>
                         <Link href="job-details"><a><Button className="btn-icon-round"><Image src="/images/eye.svg" alt="Logo" height={11} width={11} preview={false} /></Button></a></Link>
                     </Space>
                 </>
@@ -113,11 +123,14 @@ export default function Approvals({  }) {
             jobdetail: {
                 jobId: 'Job0000024',
                 mainTitle: 'TC Job Document Item',
-                date: '11 Apr, 2022; 05:57'
             },
             status: 'New',
-            receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply'],
-            initiator: 'User DX / External Co. 1',
+            receiver: 'Internal Company 1',
+            sender: 'Internal Company 1',
+            submission: {
+                user: 'User A',
+                date: '11 Apr, 2022; 05:57',
+            },
             action:''
         },
         {
@@ -125,11 +138,14 @@ export default function Approvals({  }) {
             jobdetail: {
                 jobId: 'Job0000024',
                 mainTitle: 'TC Job Document Item',
-                date: '11 Apr, 2022; 05:57'
             },
             status: 'Completed',
-            receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply'],
-            initiator: 'User DX / External Co. 1',
+            receiver: 'Internal Company 1',
+            sender: 'Internal Company 1',
+            submission: {
+                user: 'User A',
+                date: '11 Apr, 2022; 05:57',
+            },
             action:''
         },
         {
@@ -137,11 +153,14 @@ export default function Approvals({  }) {
             jobdetail: {
                 jobId: 'Job0000024',
                 mainTitle: 'TC Job Document Item',
-                date: '11 Apr, 2022; 05:57'
             },
             status: 'Rejected',
-            receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply'],
-            initiator: 'User DX / External Co. 1',
+            receiver: 'Internal Company 1',
+            sender: 'Internal Company 1',
+            submission: {
+                user: 'User A',
+                date: '11 Apr, 2022; 05:57',
+            },
             action:''
         },
         {
@@ -149,11 +168,14 @@ export default function Approvals({  }) {
             jobdetail: {
                 jobId: 'Job0000024',
                 mainTitle: 'TC Job Document Item',
-                date: '11 Apr, 2022; 05:57'
             },
             status: 'Assigned',
-            receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply'],
-            initiator: 'User DX / External Co. 1',
+            receiver: 'Internal Company 1',
+            sender: 'Internal Company 1',
+            submission: {
+                user: 'User A',
+                date: '11 Apr, 2022; 05:57',
+            },
             action:''
         }
     ];
@@ -231,6 +253,15 @@ const mergeColumns = columns.map((col, index) => ({
                 </Space>
             </header>
             <main className='main-pad'>
+                <div className='filter-list'>
+                    <ul>
+                        <li className='active'>All</li>
+                        <li>Pending</li>
+                        <li>Approved</li>
+                        <li>Reviewed</li>
+                        <li>Rejected</li>
+                    </ul>
+                </div>
                 <Table
                     components={{
                         header: {

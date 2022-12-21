@@ -38,6 +38,7 @@ export default function Sidebar(){
                 <Image src="/images/sidebar/processing-green.svg" alt="processing"  className="img-active" preview={false}/>
                 <Image src="/images/sidebar/processing.svg" alt="processing" className="img-default" preview={false}/>
                 <span>Processing</span>
+                <span className='notification-badge'>2</span>
               </a>
             </Link>
           </li>
@@ -56,6 +57,7 @@ export default function Sidebar(){
                 <Image src="/images/sidebar/received-green.svg" alt="received"  className="img-active" preview={false}/>
                 <Image src="/images/sidebar/received.svg" alt="received" className="img-default" preview={false}/>
                 <span>Received</span>
+                <span className='notification-badge'>2</span>
               </a>
             </Link>
           </li>
