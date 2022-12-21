@@ -9,7 +9,7 @@
        url('../public/fonts/Gilroy-Bold.svg#Gilroy-Bold') format('svg');
 }
 html,
-body {
+body, #__next {
   padding: 0;
   margin: 0;
   font-family: 'Inter', sans-serif;
