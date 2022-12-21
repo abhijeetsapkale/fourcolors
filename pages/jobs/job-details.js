@@ -73,7 +73,7 @@ export default function JobDetails({ }) {
                             <Row className='mt-25'>
                                 <Col span="24">
                                     <h5>Job Title</h5>
-                                    <h4>TC job Document Item</h4>
+                                    <h3>TC job Document Item</h3>
                                 </Col>
                             </Row>
                             <Row className='mt-25'>

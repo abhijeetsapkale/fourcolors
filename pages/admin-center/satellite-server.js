@@ -195,7 +195,7 @@ export default function SatelliteServer({ }) {
                                     <Col>
                                         <Dropdown overlay={menu} trigger={['click']} placement="topRight">
                                             <div className="btn-icon-dot">
-                                                <Image src="/images/dot.svg" alt="Logo" height={3} width={14} preview={false} />
+                                                <Image src="/images/dot.svg" alt="Logo" height={4} width={14} preview={false} />
                                             </div>
                                         </Dropdown>            
                                     </Col>
@@ -222,7 +222,7 @@ export default function SatelliteServer({ }) {
                                     <Col>
                                         <Dropdown overlay={menu} trigger={['click']} placement="topRight">
                                             <div className="btn-icon-dot">
-                                                <Image src="/images/dot.svg" alt="Logo" height={3} width={14} preview={false} />
+                                                <Image src="/images/dot.svg" alt="Logo" height={4} width={14} preview={false} />
                                             </div>
                                         </Dropdown>            
                                     </Col>
@@ -248,7 +248,7 @@ export default function SatelliteServer({ }) {
                                     <Col>
                                         <Dropdown overlay={menu} trigger={['click']} placement="topRight">
                                             <div className="btn-icon-dot">
-                                                <Image src="/images/dot.svg" alt="Logo" height={3} width={14} preview={false} />
+                                                <Image src="/images/dot.svg" alt="Logo" height={4} width={14} preview={false} />
                                             </div>
                                         </Dropdown>            
                                     </Col>
@@ -274,7 +274,7 @@ export default function SatelliteServer({ }) {
                                     <Col>
                                         <Dropdown overlay={menu} trigger={['click']} placement="topRight">
                                             <div className="btn-icon-dot">
-                                                <Image src="/images/dot.svg" alt="Logo" height={3} width={14} preview={false} />
+                                                <Image src="/images/dot.svg" alt="Logo" height={4} width={14} preview={false} />
                                             </div>
                                         </Dropdown>            
                                     </Col>

@@ -102,10 +102,10 @@ export default function AllDocuments({ }) {
                     <Space>
                         <Dropdown overlay={menu} trigger={['click']} className="btn-icon-round" placement="bottomRight">
                             <Button className="btn-icon-round">
-                                <Image src="/images/dot.svg" alt="Logo" height={3} width={14} preview={false} />
+                                <Image src="/images/dot.svg" alt="Logo" height={4} width={14} preview={false} />
                             </Button>
                         </Dropdown>
-                        <Button className="btn-icon-round" onClick={show2}><Image src="/images/eye.svg" alt="Logo" height={8} width={11} preview={false} /></Button>
+                        <Button className="btn-icon-round" onClick={show2}><Image src="/images/eye.svg" alt="Logo" height={11} width={11} preview={false} /></Button>
                     </Space>
                 </>
             },

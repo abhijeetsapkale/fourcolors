@@ -513,6 +513,7 @@
 }
 .ant-upload.ant-upload-drag{
   background: #fff;
+  border: none;
 }
 .new-job-right .ant-upload-list{
   padding: 20px;
@@ -537,6 +538,11 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
+  color: #101828;
+}
+.job-detail-left h3{
+  font-weight: 600;
+  font-size: 16px;
   color: #101828;
 }
 .job-detail-left ul{
