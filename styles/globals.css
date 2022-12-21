@@ -393,10 +393,10 @@ input.ant-input:hover, input.ant-input:focus {
 .ant-select:not(.ant-select-customize-input) div.ant-select-selector{
   border-radius: 5px;
 }
-.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+div.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
   color: rgba(0, 0, 0, 0.85);
   font-weight: 600;
-  background-color: #F1FFF1;
+  background-color: #eaeaea;
 }
 .ant-select-item-option-selected:not(.ant-select-item-option-disabled) .ant-select-item-option-state {
   color: #22B27E;
@@ -506,7 +506,7 @@ div.ant-modal-header{
   position: relative;
 } */
 .ant-select-arrow .anticon-down:after{
-  content: url('../public/images/down.svg');
+  content: url('images/down.svg');
   position: absolute;
   right: 0px;
   top: 0px;
