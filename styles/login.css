@@ -97,7 +97,7 @@
 form .ant-form-item{
   margin-bottom: 20px;
 }
-.login-wrap .ant-btn{
+.login-wrap button.ant-btn{
   height: 44px;
   font-weight: 500;
 font-size: 16px;

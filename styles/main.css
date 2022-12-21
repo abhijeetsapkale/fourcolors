@@ -119,18 +119,18 @@
   color: #101828;
   margin-bottom: 0;
 }
-.table-1 tbody tr td .ant-btn span{
+.table-1 tbody tr td button.ant-btn span{
   font-weight: 600;
   font-size: 12px;
   color: #101828;
   letter-spacing: 0.01em;
 }
-.table-1 tbody tr td .ant-btn{
+.table-1 tbody tr td button.ant-btn{
   min-width:110px;
   border-radius: 4px;
   padding: 0px 5px;
 }
-.table-1 tbody tr td .ant-btn:not([disabled]):hover {
+.table-1 tbody tr td button.ant-btn:not([disabled]):hover {
   text-decoration: none;
   background: #dfdfdf;
   border-color: #dfdfdf;
@@ -141,7 +141,7 @@
   color: #101828;
   margin-bottom: 2px;
 }
-.table-1 .ant-btn.btn-icon-round{
+.table-1 button.ant-btn.btn-icon-round{
   width: 30px;
   height: 30px;
   border: none;
@@ -151,11 +151,11 @@
   background: #F0F2F4;
   border-radius: 5px;
 }
-.table-1 .ant-btn.btn-icon-round img{
+.table-1 button.ant-btn.btn-icon-round img{
   position: relative;
   top: -2px;
 }
-.table-1 .ant-btn.btn-icon-round svg{
+.table-1 button.ant-btn.btn-icon-round svg{
   fill: #667085
 }
 .status{
