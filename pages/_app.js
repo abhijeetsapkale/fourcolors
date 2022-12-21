@@ -1,5 +1,5 @@
 import 'antd/dist/antd.css';
-import '../styles/globals.css';
+import '../styles/common.css';
 import '../styles/login.css';
 import '../styles/main.css';
 import NoSSRWrapper from "../components/no-ssr-wrapper";
