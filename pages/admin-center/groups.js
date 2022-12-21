@@ -104,7 +104,7 @@ export default function AllDocuments({ }) {
                 </>
             },
             width: 100,
-            align: 'right'
+            align: 'center'
         },
     ]);
 
@@ -241,6 +241,7 @@ export default function AllDocuments({ }) {
                                             <Col span="24">
                                                 <label className='label'>User</label>
                                                 <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                     showSearch="true"
                                                     className='custom-select'
                                                     placeholder="Select users"
@@ -263,6 +264,7 @@ export default function AllDocuments({ }) {
                                             <Col span="24">
                                                 <label className='label'>Status</label>
                                                 <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                     showSearch="true"
                                                     className='custom-select'
                                                     placeholder="Select Status"
@@ -290,6 +292,7 @@ export default function AllDocuments({ }) {
                                             <Col span="24">
                                                 <label className='label'>Created By</label>
                                                 <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                     showSearch="true"
                                                     className='custom-select'
                                                     placeholder="Select"
@@ -318,6 +321,7 @@ export default function AllDocuments({ }) {
                                             <Col span="24">
                                                 <label className='label'>Last Modified By</label>
                                                 <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                     showSearch="true"
                                                     className='custom-select'
                                                     placeholder="Select"

@@ -52,7 +52,7 @@ export default function AllDocuments({ }) {
                     <p>{jobdetail.date}</p>
                 </>
             },
-            width: 250
+            width: 200
         },
         {
             title: 'Status',
@@ -62,20 +62,17 @@ export default function AllDocuments({ }) {
                 if (status == "Processing") {
                     return <span className='status dark-purple'>{' '}{status}</span>
                 }
-                else if (status == "Draft") {
-                    return <span className='status light-purple'>{' '}{status}</span>
+                else if (status == "Unshared") {
+                    return <span className='status orange'>{' '}{status}</span>
                 }
-                else if (status == "OFTP Ready") {
-                    return <span className='status dark-green'>{' '}{status}</span>
-                }
-                else if (status == "Cancelled") {
-                    return <span className='status red'>{' '}{status}</span>
-                }
-                else if (status == "Sent") {
+                else if (status == "Uploading") {
                     return <span className='status blue'>{' '}{status}</span>
                 }
-                else if (status == "Received") {
+                else if (status == "Ready for Download") {
                     return <span className='status light-green'>{' '}{status}</span>
+                }
+                else if (status == "Download Complete") {
+                    return <span className='status cyan'>{' '}{status}</span>
                 }
             },
             width: 250,
@@ -86,16 +83,16 @@ export default function AllDocuments({ }) {
             dataIndex: 'receiver',
             key: 'receiver',
             render: receiver => {
-                return receiver.map((rc) => <p className='text-dark fw-500' key={rc.id}>{rc}</p>)
+                return receiver.map((rc) => <p key={rc.id}>{rc}</p>)
             },
-            width: 200
+            width: 260
         },
         {
             title: 'INITIATOR / COMPANY',
             dataIndex: 'initiator',
             key: 'initiator',
             render: initiator => {
-                return <p className='text-dark fw-500'>{initiator}</p>
+                return <p>{initiator}</p>
             },
             width: 200
         },
@@ -115,7 +112,8 @@ export default function AllDocuments({ }) {
                     </Space>
                 </>
             },
-            width: 100
+            width: 100,
+            align:'center'
         },
     ]);
 
@@ -139,7 +137,7 @@ export default function AllDocuments({ }) {
                 mainTitle: 'TC Job Document Item',
                 date: '11 Apr, 2022; 05:57'
             },
-            status: 'Draft',
+            status: 'Unshared',
             receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply'],
             initiator: 'User DX / External Co. 1',
             action: ''
@@ -151,7 +149,7 @@ export default function AllDocuments({ }) {
                 mainTitle: 'TC Job Document Item',
                 date: '11 Apr, 2022; 05:57'
             },
-            status: 'OFTP Ready',
+            status: 'Uploading',
             receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply', '+2 more'],
             initiator: 'User DX / External Co. 1',
             action: ''
@@ -163,7 +161,7 @@ export default function AllDocuments({ }) {
                 mainTitle: 'TC Job Document Item',
                 date: '11 Apr, 2022; 05:57'
             },
-            status: 'Cancelled',
+            status: 'Ready for Download',
             receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply', '+2 more'],
             initiator: 'User DX / External Co. 1',
             action: ''
@@ -175,7 +173,7 @@ export default function AllDocuments({ }) {
                 mainTitle: 'TC Job Document Item',
                 date: '11 Apr, 2022; 05:57'
             },
-            status: 'Sent',
+            status: 'Processing',
             receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply'],
             initiator: 'User DX / External Co. 1',
             action: ''
@@ -187,7 +185,7 @@ export default function AllDocuments({ }) {
                 mainTitle: 'TC Job Document Item',
                 date: '11 Apr, 2022; 05:57'
             },
-            status: 'Received',
+            status: 'Download Complete',
             receiver: ['Wolfix Cai /  Four Colors', 'Ashutosh Palekar /  FourColors Ply'],
             initiator: 'User DX / External Co. 1',
             action: ''

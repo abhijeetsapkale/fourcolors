@@ -68,7 +68,7 @@ export default function Sent({  }) {
             dataIndex: 'receiver',
             key: 'receiver',
             render: receiver => {
-                return receiver.map((rc) =>  <p className='text-dark fw-500' key={rc.id}>{rc}</p>)
+                return receiver.map((rc) =>  <p key={rc.id}>{rc}</p>)
             },
             width: 200
         },
@@ -77,7 +77,7 @@ export default function Sent({  }) {
             dataIndex: 'initiator',
             key: 'initiator',
             render: initiator => {
-                return <p className='text-dark fw-500'>{initiator}</p>
+                return <p>{initiator}</p>
             },
             width: 200
         },
@@ -97,7 +97,8 @@ export default function Sent({  }) {
                     </Space>
                 </>
             },
-            width: 100
+            width: 100,
+            align:'center'
         },
     ]);
 

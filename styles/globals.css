@@ -499,18 +499,8 @@ div.ant-modal-header{
   font-size: 14px;
   color: #101828;
 }
-.ant-select-arrow .anticon-down svg{
-  display: none;
-}
-/* .ant-select-arrow .anticon-down {
-  position: relative;
-} */
-.ant-select-arrow .anticon-down:after{
-  content: url('images/down.svg');
-  position: absolute;
-  right: 0px;
-  top: 0px;
-}
+
+
 span.ant-radio-inner{
   border-color: #667085;
 }

@@ -115,10 +115,10 @@
   padding: 12px 15px;
 }
 .table-1 tbody tr td, .table-1 tbody tr td p, .table-1 tbody tr td span{
-  font-size: 12px;
-  letter-spacing: 0.01em;
+  font-size: 13px;
   color: #101828;
   margin-bottom: 0;
+  line-height: 22px;
 }
 .table-1 tbody tr td button.ant-btn span{
   font-weight: 600;
@@ -184,8 +184,8 @@
   background: #FFE1E7;
 }
 .status.blue{
-  color: #3782E3;
-  background: #E7F1FF;
+  color: #4F6FBD;
+  background: #E5F0FF;
 }
 .status.light-green{
   color: #1E7E5E;
@@ -196,7 +196,7 @@
   background: #FFF9F2;
 }
 .status.cyan{
-  color: #147FBB;
+  color: #117EBB;
   background: #CDEAFA;
 }
 .status.yellow{
@@ -829,4 +829,11 @@
   bottom: 0;
   margin: auto;
   right: 20px;
+}
+div.ant-tooltip-inner{
+  font-weight: 400;
+  font-size: 12px;
+  min-width: 30px;
+  min-height: 27px;
+  padding: 5px 10px;
 }

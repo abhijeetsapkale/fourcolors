@@ -106,7 +106,7 @@ export default function AllDocuments({ }) {
                 </>
             },
             width: 100,
-            align: 'right'
+            align: 'center'
         },
     ]);
 
@@ -224,6 +224,7 @@ export default function AllDocuments({ }) {
                                             <Col span="24">
                                                 <label className='label'>CAD Format</label>
                                                 <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                     showSearch="true"
                                                     className='custom-select'
                                                     placeholder="Select CAD format"

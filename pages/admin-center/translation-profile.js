@@ -109,7 +109,8 @@ export default function AllDocuments({ }) {
                     </Space>
                 </>
             },
-            width: 100
+            width: 100,
+            align: 'center'
         },
     ]);
 
@@ -246,6 +247,7 @@ export default function AllDocuments({ }) {
                                             <Col span="24">
                                                 <label className='label'>Source format</label>
                                                 <Select
+                                                    suffixIcon={<Image src='/images/down.svg'></Image>}
                                                     showSearch="true"
                                                     className='custom-select'
                                                     placeholder="Select source format"
@@ -268,6 +270,7 @@ export default function AllDocuments({ }) {
                                             <Col span="24">
                                                 <label className='label'>Destination format</label>
                                                 <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                     showSearch="true"
                                                     className='custom-select'
                                                     placeholder="Select destination format"
@@ -301,6 +304,7 @@ export default function AllDocuments({ }) {
                                             <Col span="24">
                                                 <label className='label'>QC profile</label>
                                                 <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                     showSearch="true"
                                                     className='custom-select'
                                                     placeholder="Select QC profile"

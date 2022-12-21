@@ -39,35 +39,47 @@ export default function Users({ }) {
     
     const [columns, setColumns] = useState([
         {
-            title: 'USER DETAILS',
-            dataIndex: 'userDetail',
-            key: 'userDetail',
-            render: userDetail => {
+            title: 'NAME / HOST COMPANY',
+            dataIndex: 'companyDetail',
+            key: 'companyDetail',
+            render: companyDetail => {
                 return <>
-                    <h3>{userDetail.mainTitle}</h3>
-                    <p>{userDetail.id} | {userDetail.email}</p>
+                    <h3>{companyDetail.mainTitle}</h3>
+                    <p>{companyDetail.host}</p>
                 </>
             },
             width: 150
         },
         {
-            title: 'COMPANY',
-            dataIndex: 'company',
-            key: 'company',
-            render: company => {
+            title: 'CHANNEL & FORMAT',
+            dataIndex: 'format',
+            key: 'format',
+            render: format => {
                 return <>
-                    <p>{company}</p>
+                    <p>{format.channel}</p>
+                    <p>{format.type}</p>
                 </>
             },
             width: 250
         },
         {
-            title: 'ROLE',
-            dataIndex: 'role',
-            key: 'role',
-            render: role => {
+            title: 'PRIMARY CONTACT',
+            dataIndex: 'primaryContact',
+            key: 'primaryContact',
+            render: primaryContact => {
                 return <>
-                    <p>{role}</p>
+                    <p>{primaryContact}</p>
+                </>
+            },
+            width: 100
+        },
+        {
+            title: 'LOCATION',
+            dataIndex: 'location',
+            key: 'location',
+            render: location => {
+                return <>
+                    <p>{location}</p>
                 </>
             },
             width: 100
@@ -106,20 +118,23 @@ export default function Users({ }) {
                 </>
             },
             width: 100,
-            align: 'right'
+            align: 'center'
         },
     ]);
 
     const dataSource = [
         {
             key: '1',
-            userDetail: {
-                mainTitle: 'Sahithi Saragadm',
-                id: '100001',
-                email: 'Sahithi.saragadam@fourcolorstech.com'
+            companyDetail: {
+                mainTitle: 'External Company 3',
+                host: 'Host Company'
             },
-            company: 'External Company 1',
-            role: 'External User',
+            format: {
+                channel: 'HTTPS',
+                type: 'Zip'
+            },
+            primaryContact: 'DX dba',
+            location: 'Not Applicable',
             status: 'Active',
             action: ''
         }
@@ -231,6 +246,7 @@ export default function Users({ }) {
                                             <Col span="24">
                                                 <label className='label'>Mandatory Profile</label>
                                                 <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                     showSearch="true"
                                                     className='custom-select'
                                                     placeholder="Select"
@@ -253,6 +269,7 @@ export default function Users({ }) {
                                             <Col span="24">
                                                 <label className='label'>Default Channel</label>
                                                 <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                     showSearch="true"
                                                     className='custom-select'
                                                     placeholder="Select"
@@ -275,6 +292,7 @@ export default function Users({ }) {
                                             <Col span="24">
                                                 <label className='label'>Packaging Format</label>
                                                 <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                     showSearch="true"
                                                     className='custom-select'
                                                     placeholder="Select"
@@ -297,6 +315,7 @@ export default function Users({ }) {
                                             <Col span="24">
                                                 <label className='label'>Primary Contact</label>
                                                 <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                     showSearch="true"
                                                     className='custom-select'
                                                     placeholder="Select"
@@ -343,6 +362,7 @@ export default function Users({ }) {
                                             <Col span="24">
                                                 <label className='label'>Location</label>
                                                 <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                     showSearch="true"
                                                     className='custom-select'
                                                     placeholder="Select"

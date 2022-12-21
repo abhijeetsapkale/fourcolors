@@ -95,7 +95,8 @@ export default function Drafts({}) {
                     </Space>
                 </>
             },
-            width: 100
+            width: 100,
+            align:'center'
         },
     ]);
 

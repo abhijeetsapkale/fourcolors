@@ -46,7 +46,7 @@ export default function Archived({ }) {
                     <p>{jobdetail.date}</p>
                 </>
             },
-            width: 250
+            width: 200
         },
         {
             title: 'Status',
@@ -80,16 +80,16 @@ export default function Archived({ }) {
             dataIndex: 'receiver',
             key: 'receiver',
             render: receiver => {
-                return receiver.map((rc) =>  <p className='text-dark fw-500' key={rc.id}>{rc}</p>)
+                return receiver.map((rc) =>  <p key={rc.id}>{rc}</p>)
             },
-            width: 200
+            width: 250
         },
         {
             title: 'INITIATOR / COMPANY',
             dataIndex: 'initiator',
             key: 'initiator',
             render: initiator => {
-                return <p className='text-dark fw-500'>{initiator}</p>
+                return <p>{initiator}</p>
             },
             width: 200
         },

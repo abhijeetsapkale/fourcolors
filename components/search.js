@@ -1,4 +1,4 @@
-import { Input, Select, AutoComplete } from 'antd';
+import { Input, Select, AutoComplete, Image } from 'antd';
 import React, { useState } from 'react';
 const { Option } = AutoComplete;
 
@@ -21,7 +21,8 @@ export default function Search() {
   return (
     <>
       <Input.Group compact className='custom-search-wrap'>
-        <Select defaultValue="1" className='custom-list'>
+        <Select
+          suffixIcon={<Image src='/images/down.svg'></Image>} defaultValue="1" className='custom-list'>
           <option value="1">All</option>
           <option value="2">Job id</option>
           <option value="3">Job Title</option>

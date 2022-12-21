@@ -106,7 +106,7 @@ export default function Users({ }) {
                 </>
             },
             width: 100,
-            align: 'right'
+            align: 'center'
         },
     ]);
 
@@ -217,6 +217,7 @@ export default function Users({ }) {
                                             <Col span="24">
                                                 <label className='label'>Company</label>
                                                 <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                     showSearch="true"
                                                     className='custom-select'
                                                     placeholder="Select Company"
@@ -245,6 +246,7 @@ export default function Users({ }) {
                                             <Col span="24">
                                                 <label className='label'>Role</label>
                                                 <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                     showSearch="true"
                                                     className='custom-select'
                                                     placeholder="Select Role"
@@ -267,6 +269,7 @@ export default function Users({ }) {
                                             <Col span="24">
                                                 <label className='label'>Status</label>
                                                 <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                     showSearch="true"
                                                     className='custom-select'
                                                     placeholder="Select Status"
@@ -295,6 +298,7 @@ export default function Users({ }) {
                                             <Col span="24">
                                                 <label className='label'>Location</label>
                                                 <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                     showSearch="true"
                                                     className='custom-select'
                                                     placeholder="Select Location"
@@ -359,6 +363,7 @@ export default function Users({ }) {
                                             <Col span="24">
                                                 <label className='label'>Security Question 1</label>
                                                 <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                     showSearch="true"
                                                     className='custom-select'
                                                     placeholder="Select"
@@ -387,6 +392,7 @@ export default function Users({ }) {
                                             <Col span="24">
                                                 <label className='label'>Security Question 2</label>
                                                 <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                     showSearch="true"
                                                     className='custom-select'
                                                     placeholder="Select"
@@ -415,6 +421,7 @@ export default function Users({ }) {
                                             <Col span="24">
                                                 <label className='label'>Security Question 3</label>
                                                 <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                     showSearch="true"
                                                     className='custom-select'
                                                     placeholder="Select"

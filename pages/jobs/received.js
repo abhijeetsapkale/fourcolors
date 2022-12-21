@@ -70,7 +70,7 @@ export default function Received({ }) {
             dataIndex: 'initiator',
             key: 'initiator',
             render: initiator => {
-                return <p className='text-dark fw-500'>{initiator}</p>
+                return <p>{initiator}</p>
             },
             width: 200
         },

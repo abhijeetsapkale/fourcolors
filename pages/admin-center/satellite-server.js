@@ -105,6 +105,7 @@ export default function SatelliteServer({ }) {
                                             <Col span="24">
                                                 <label className='label'>Location</label>
                                                 <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                     showSearch="true"
                                                     className='custom-select'
                                                     placeholder="Select"

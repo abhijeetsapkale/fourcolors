@@ -105,6 +105,7 @@ export default function CadProcessor({ }) {
                                             <Col span="24">
                                                 <label className='label'>Location</label>
                                                 <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                     showSearch="true"
                                                     className='custom-select'
                                                     placeholder="Select"
@@ -180,7 +181,7 @@ export default function CadProcessor({ }) {
                                 <Row>
                                     <Col span="24">
                                         <Tooltip title="Name" placement="bottom" color="#242A41"><h3>NX  HQM 1</h3></Tooltip>
-                                        <Tooltip title="Description" placement="bottom" color="#242A41">
+                                        <Tooltip title="Location" placement="bottom" color="#242A41">
                                             <Space>
                                                 <Image src="/images/map.svg" alt="export" height={11} width={10} preview={false} className="img-export" />
                                                 <h5 className='mb-0'>San Francisco, California</h5>
@@ -208,7 +209,7 @@ export default function CadProcessor({ }) {
                                 <Row>
                                     <Col span="24">
                                         <Tooltip title="Name" placement="bottom" color="#242A41"><h3>NX  HQM 1</h3></Tooltip>
-                                        <Tooltip title="Description" placement="bottom" color="#242A41">
+                                        <Tooltip title="Location" placement="bottom" color="#242A41">
                                             <Space>
                                                 <Image src="/images/map.svg" alt="export" height={11} width={10} preview={false} className="img-export" />
                                                 <h5 className='mb-0'>San Francisco, California</h5>
@@ -222,7 +223,6 @@ export default function CadProcessor({ }) {
                                 <Row type="flex" justify="space-between" align="middle" className='mt-10'>
                                     <Col>
                                         <span class="status light-green" onClick={showModal}> Active</span>
-                                        
                                     </Col>
                                     <Col>
                                         <Dropdown overlay={menu} trigger={['click']} placement="topRight">

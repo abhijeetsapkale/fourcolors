@@ -109,6 +109,7 @@ export default function NewJob({ }) {
                                 <Col span="24">
                                     <label className='label'>Receiver/Company</label>
                                     <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                         showSearch="true"
                                         mode="multiple"
                                         className='custom-select'
@@ -145,6 +146,7 @@ export default function NewJob({ }) {
                                 <Col span="24">
                                     <label className='label'>Channel</label>
                                     <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                         showSearch="true"
                                         className='custom-select'
                                         placeholder="Select Channel"
@@ -216,6 +218,7 @@ export default function NewJob({ }) {
                                                 </Col>
                                                 <Col span={6}>
                                                     <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                         showSearch="true"
                                                         className='custom-select'
                                                         placeholder="Select Target"
@@ -274,6 +277,7 @@ export default function NewJob({ }) {
                                                 </Col>
                                                 <Col span={6}>
                                                     <Select
+                                                suffixIcon={<Image src='/images/down.svg'></Image>}
                                                         showSearch="true"
                                                         className='custom-select'
                                                         placeholder="Select Target"

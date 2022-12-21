@@ -46,7 +46,7 @@ export default function Cancelled({ }) {
                     <p>{jobdetail.date}</p>
                 </>
             },
-            width: 250
+            width: 200
         },
         {
             title: 'Status',
@@ -75,7 +75,7 @@ export default function Cancelled({ }) {
                     return <span className='status light-green'>{' '}{status}</span>
                 }
             },
-            width: 250,
+            width: 200,
             align: 'center'
         },
         {
@@ -83,16 +83,16 @@ export default function Cancelled({ }) {
             dataIndex: 'receiver',
             key: 'receiver',
             render: receiver => {
-                return receiver.map((rc) =>  <p className='text-dark fw-500' key={rc.id}>{rc}</p>)
+                return receiver.map((rc) =>  <p key={rc.id}>{rc}</p>)
             },
-            width: 200
+            width: 260
         },
         {
             title: 'INITIATOR / COMPANY',
             dataIndex: 'initiator',
             key: 'initiator',
             render: initiator => {
-                return <p className='text-dark fw-500'>{initiator}</p>
+                return <p>{initiator}</p>
             },
             width: 200
         },
@@ -112,7 +112,8 @@ export default function Cancelled({ }) {
                     </Space>
                 </>
             },
-            width: 100
+            width: 100,
+            align:'center'
         },
     ]);
 
