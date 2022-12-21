@@ -12,11 +12,16 @@ html,
 body, #__next {
   padding: 0;
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif !important;
   font-size: 14px;
   color: #4E5461;
   letter-spacing: 0.01em;
   background: #F4F4F4 !important;
+}
+html,
+body{
+ 
+  font-family: 'Inter', sans-serif !important;
 }
 
 a {
