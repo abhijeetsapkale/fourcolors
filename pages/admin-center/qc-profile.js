@@ -287,7 +287,7 @@ export default function AllDocuments({ }) {
                                     {pageSizeOptions: ['2', '4', '6'], showSizeChanger: true, }
                                 }  className="table-1"/> */}
 
-                            <Drawer title="Translation Profile Details" placement="right" onClose={onClose2} open={open2} width={480} className="custom-drawer">
+                            <Drawer title="QC Profile Details" placement="right" onClose={onClose2} open={open2} width={480} className="custom-drawer">
                                 <div className='drawer-detail-wrap'>
                                     <Row>
                                         <Col span="24">
