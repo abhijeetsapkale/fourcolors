@@ -634,6 +634,7 @@
 .custom-drawer .ant-drawer-header .ant-drawer-title{
   background: #242A41;
   color: #FFFFFF;  
+  text-transform: capitalize;
 }
 .custom-drawer .ant-drawer-header .ant-drawer-header-title{
   flex-flow: row-reverse !important;
@@ -836,4 +837,7 @@ div.ant-tooltip-inner{
   min-width: 30px;
   min-height: 27px;
   padding: 5px 10px;
+}
+div.ant-select div.ant-image-mask{
+  display: none;
 }
