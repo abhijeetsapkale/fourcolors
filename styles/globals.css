@@ -381,16 +381,16 @@ input.ant-input:hover, input.ant-input:focus {
   font-size: 14px;
   color: #667085;
 }
-.ant-select:not(.ant-select-disabled):hover .ant-select-selector{
+div.ant-select:not(.ant-select-disabled):hover .ant-select-selector{
   border-color: #e0e0e0;
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
   border-radius: 5px;
 }
-.ant-select-item-option-content{
+div.ant-select-item-option-content{
   font-weight: 500;
   font-size: 14px;
 }
-.ant-select:not(.ant-select-customize-input) div.ant-select-selector{
+div.ant-select:not(.ant-select-customize-input) div.ant-select-selector{
   border-radius: 5px;
 }
 div.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
@@ -398,13 +398,13 @@ div.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
   font-weight: 600;
   background-color: #eaeaea;
 }
-.ant-select-item-option-selected:not(.ant-select-item-option-disabled) .ant-select-item-option-state {
+div.ant-select-item-option-selected:not(.ant-select-item-option-disabled) .ant-select-item-option-state {
   color: #22B27E;
 }
-.ant-select-focused{
+div.ant-select-focused{
   box-shadow: none;
 }
-.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+div.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
   border-color: #e0e0e0;
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
 }
